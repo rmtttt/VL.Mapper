@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<Document xmlns:p="property" xmlns:r="reflection" Id="CbQ49tB1IyGQTS8CTz165D" LanguageVersion="2023.5.2" Version="0.128">
-  <NugetDependency Id="NJqwcoNIQvcPvHyIQGVcT0" Location="VL.CoreLib" Version="2023.5.2" />
+<Document xmlns:p="property" xmlns:r="reflection" Id="CbQ49tB1IyGQTS8CTz165D" LanguageVersion="2024.6.6-0010-gbaee5e8cb4" Version="0.128">
+  <NugetDependency Id="NJqwcoNIQvcPvHyIQGVcT0" Location="VL.CoreLib" Version="2024.6.6-0010-gbaee5e8cb4" />
   <Patch Id="KeXYx29Osj7PdlX9X4EiFk">
     <Canvas Id="TmCnPAlnth2PWfE7U4yD91" DefaultCategory="Mapper.Grid" CanvasType="FullCategory">
       <Canvas Id="EImvoGa74UGO03eU4aEwPp" Name="Advanced" Position="663,411">
@@ -774,6 +774,7 @@
                       <Choice Kind="OperationCallFlag" Name="GetPoints" />
                     </p:NodeReference>
                     <Pin Id="HIx5NPQ8c9TOtmWNJGTjNk" Name="Input" Kind="StateInputPin" />
+                    <Pin Id="Mz0HFSRHqNgM21SvWfZSkm" Name="Output" Kind="OutputPin" />
                     <Pin Id="Kn9g4j0DJu1Nw1wn39SUbB" Name="Points" Kind="OutputPin" />
                   </Node>
                   <Node Bounds="1294,1617,84,69" Id="IjNIoIk4F8nLXkvVn0O9nm">
@@ -796,6 +797,7 @@
                           <Choice Kind="OperationCallFlag" Name="GetKnots" />
                         </p:NodeReference>
                         <Pin Id="CRMhCdPgVfiOBPDKgz7Bh1" Name="Input" Kind="StateInputPin" />
+                        <Pin Id="TDR7tCS1C7AMCNfDctcipQ" Name="Output" Kind="OutputPin" />
                         <Pin Id="Axm80FY87zALjj8P7xHboY" Name="Horizontal" Kind="OutputPin" />
                         <Pin Id="NneOEykbVHeQPNyVG3u29A" Name="Vertical" Kind="OutputPin" />
                       </Node>
@@ -818,12 +820,13 @@
               <ControlPoint Id="K1zlZ98Ryp1L0lJZaqeNdj" Bounds="1308,1808" />
               <ControlPoint Id="QkqGMU6215vOxjjR6vo3Gy" Bounds="1402,832" />
               <Pad Id="FLaPYDIgmtjLjYjSS5XEdK" Bounds="1094,1318" isIOBox="true" />
-              <ControlPoint Id="C4sXEEcC6LHOdWnYOHv6fN" Bounds="1144,1420" />
+              <ControlPoint Id="C4sXEEcC6LHOdWnYOHv6fN" Bounds="1182,1494" />
               <Node Bounds="1092,635,85,19" Id="U56pgXB8W6XNU3l5W2TYbc">
                 <p:NodeReference LastCategoryFullName="Mapper.Grid" LastDependency="VL.GridEditor.vl">
                   <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
                   <Choice Kind="ProcessAppFlag" Name="UpdateGrids" />
                 </p:NodeReference>
+                <Pin Id="HZHO0PmKIg3LSWZ8srflNk" Name="Node Context" Kind="InputPin" IsHidden="true" />
                 <Pin Id="EN4XXWOyJqqOiyNZwnhmX1" Name="Grids" Kind="InputPin" />
                 <Pin Id="JSXB2VMj9qYOCaXHD7Mchr" Name="GUIState" Kind="InputPin" />
                 <Pin Id="Tt2OZR0Ih4RPzfs3OlC77Z" Name="Size" Kind="InputPin" />
@@ -832,13 +835,14 @@
                 <Pin Id="EzURbCBzCLZPEmw22jzaRp" Name="Grids" Kind="OutputPin" />
               </Node>
               <ControlPoint Id="VvH6lWhUAihMyvwAV9yJUb" Bounds="1402,674" />
-              <Node Bounds="815,634,145,26" Id="PN1KHOvRCgZLpK7JrHISG7">
+              <Node Bounds="815,634,165,26" Id="PN1KHOvRCgZLpK7JrHISG7">
                 <p:NodeReference LastCategoryFullName="Main.GUIState" LastDependency="VL.GuiState.vl">
                   <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
                   <CategoryReference Kind="RecordType" Name="GUIState" />
                   <Choice Kind="OperationCallFlag" Name="GetSlice" />
                 </p:NodeReference>
                 <Pin Id="Dr0r1YPrYz7NHXf1tb5J2w" Name="Input" Kind="StateInputPin" />
+                <Pin Id="UhlkMyUfiXgNHqaxy3iIzA" Name="Output" Kind="OutputPin" />
                 <Pin Id="DMm3zoh6yMVMHQdfRSL6u6" Name="SliceAdd" Kind="OutputPin" />
                 <Pin Id="OB8mTHs73jqMXnJrBBwwTA" Name="SliceRemove" Kind="OutputPin" />
                 <Pin Id="SBqmUSZqPMqQEricOCWCCy" Name="SliceDuplicate" Kind="OutputPin" />
@@ -854,6 +858,7 @@
                   <CategoryReference Kind="Category" Name="Grid" NeedsToBeDirectParent="true" />
                   <Choice Kind="ProcessAppFlag" Name="Load" />
                 </p:NodeReference>
+                <Pin Id="BOW6H5EB5bJPtmCM8hapXy" Name="Node Context" Kind="InputPin" IsHidden="true" />
                 <Pin Id="QevVvjd6JiKO4jA2HPOZL2" Name="Grids" Kind="InputPin" />
                 <Pin Id="O9AueRA23f6LIN9ZKXxLJU" Name="Load" Kind="InputPin" />
                 <Pin Id="K36RnMCU5hgQbi1N6jMeBU" Name="GridsToLoad" Kind="InputPin" />
@@ -865,28 +870,32 @@
                   <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
                   <Choice Kind="ProcessAppFlag" Name="FrameDelay" />
                 </p:NodeReference>
+                <Pin Id="MbBLXwEx7mxMi01FwPcODf" Name="Node Context" Kind="InputPin" IsHidden="true" />
+                <Pin Id="TdIVBCCgNF4OQ5Jueiw79k" Name="Initial Value" Kind="InputPin" IsHidden="true" />
                 <Pin Id="IczlkSw4hZ6LGSRP38xTO9" Name="Value" Kind="InputPin" />
                 <Pin Id="RSA3pxR4DiNLbpkBPTf3LB" Name="Value" Kind="OutputPin" />
               </Node>
               <ControlPoint Id="IMNYpIGjdaHPwmXbzJLv7W" Bounds="1402,1203" />
-              <Node Bounds="815,1171,85,26" Id="V55wfMgdMXqO8jD8gbDyGa">
+              <Node Bounds="815,1171,105,26" Id="V55wfMgdMXqO8jD8gbDyGa">
                 <p:NodeReference LastCategoryFullName="Main.GUIState" LastDependency="VL.GuiState.vl">
                   <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
                   <Choice Kind="OperationCallFlag" Name="GetMain" />
                 </p:NodeReference>
                 <Pin Id="LnmwaW2UcWFMe99b0gVXWc" Name="Input" Kind="StateInputPin" />
+                <Pin Id="KAzYwb5jOQROTVxKP0AiPR" Name="Output" Kind="OutputPin" />
                 <Pin Id="Ap72cjTYhsSQGp5sopJrUk" Name="Input/Output" Kind="OutputPin" />
                 <Pin Id="UMZB1F1tkPSMucTiXQh2kk" Name="Point/Transform" Kind="OutputPin" />
                 <Pin Id="C02gkiLGMs0LSuAlIDeioj" Name="File" Kind="OutputPin" />
                 <Pin Id="UDaeXgN0u8XOdu8MfOttEC" Name="Save" Kind="OutputPin" />
                 <Pin Id="CjZvdfufk1YMqGvGdZpKo6" Name="Load" Kind="OutputPin" />
               </Node>
-              <Node Bounds="815,898,165,26" Id="DFJsjUB2e6iPDIAfkHXXzf">
+              <Node Bounds="815,898,185,26" Id="DFJsjUB2e6iPDIAfkHXXzf">
                 <p:NodeReference LastCategoryFullName="Main.GUIState" LastDependency="VL.GuiState.vl">
                   <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
                   <Choice Kind="OperationCallFlag" Name="GetParamsSlice" />
                 </p:NodeReference>
                 <Pin Id="LcmKjoa46LVMa1teq0QV0n" Name="Input" Kind="StateInputPin" />
+                <Pin Id="PPurmuLS5QiLoVbMVgqrox" Name="Output" Kind="OutputPin" />
                 <Pin Id="B7Bsm2AIh20LEISdsy2xdV" Name="SliceParamPosition" Kind="OutputPin" />
                 <Pin Id="AlaKvxN3QiNPzlgqv19Fb3" Name="SliceParamSize" Kind="OutputPin" />
                 <Pin Id="RrlkQdUBOaqMMt1O3Fy4rZ" Name="SliceParamSubdivs" Kind="OutputPin" />
@@ -906,13 +915,14 @@
                 <Pin Id="FmrAgP7gWpsLsIw3tnWBPS" Name="ScreenId" Kind="InputPin" />
                 <Pin Id="IhYAlVCD80RNMp4N5w9NKs" Name="Grids" Kind="OutputPin" />
               </Node>
-              <Node Bounds="1400,692,85,26" Id="RoexmC2JD3XQBtbPQagjJb">
+              <Node Bounds="1400,692,105,26" Id="RoexmC2JD3XQBtbPQagjJb">
                 <p:NodeReference LastCategoryFullName="Main.GUIState" LastDependency="VL.GuiState.vl">
                   <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
                   <CategoryReference Kind="RecordType" Name="GUIState" />
                   <Choice Kind="OperationCallFlag" Name="GetScreen" />
                 </p:NodeReference>
                 <Pin Id="OQGjQiAMy4SMOBPqM72R6Z" Name="Input" Kind="StateInputPin" />
+                <Pin Id="SwYuAIg6svKN3NyHmmG4Gi" Name="Output" Kind="OutputPin" />
                 <Pin Id="J8xsnWnfJfsO4tCkPEKItu" Name="ScreenAdd" Kind="OutputPin" />
                 <Pin Id="LkKOs6eeZqIPLmq9rUncNO" Name="ScreenRemove" Kind="OutputPin" />
                 <Pin Id="P2B9JB7DOYJL5Aw3HfJR99" Name="ScreenClear" Kind="OutputPin" />
@@ -959,6 +969,7 @@
                       <CategoryReference Kind="Category" Name="Grid" NeedsToBeDirectParent="true" />
                       <Choice Kind="ProcessAppFlag" Name="Controls" />
                     </p:NodeReference>
+                    <Pin Id="NNqukrN8ZR1PQcEmbjCdwH" Name="Node Context" Kind="InputPin" IsHidden="true" />
                     <Pin Id="HLFe4JlHBFdM7GtgpA0s4R" Name="Grids" Kind="InputPin" />
                     <Pin Id="La5c3yg1QJAN4gchjqufyI" Name="Grids" Kind="OutputPin" />
                   </Node>
@@ -969,6 +980,7 @@
                       <Choice Kind="OperationCallFlag" Name="Split" />
                     </p:NodeReference>
                     <Pin Id="QECDMLOYT4yOtU6kUTplO3" Name="Input" Kind="StateInputPin" />
+                    <Pin Id="GUpEsi293uVOLmgIFZ0wmW" Name="Output" Kind="OutputPin" IsHidden="true" />
                     <Pin Id="BhWRrZ4i2UFK9eXdOcXlHk" Name="Param" Kind="OutputPin" />
                     <Pin Id="S7zSgphfpCyLK7wuLl1h2R" Name="Bang" Kind="OutputPin" />
                   </Node>
@@ -1041,13 +1053,14 @@
               <ControlPoint Id="UtEHqBXKxraNvp0tFO0bJw" Bounds="1199,461" />
               <ControlPoint Id="Cb0FIfAULdPLD26tZpOFjc" Bounds="1402,1054" />
               <ControlPoint Id="OdstLGIbQotOhYFPGHAHAS" Bounds="1440,1348" />
-              <Node Bounds="1438,1366,85,26" Id="AA1YGrVPqbXNBwQpZ5V0mC">
+              <Node Bounds="1438,1366,105,26" Id="AA1YGrVPqbXNBwQpZ5V0mC">
                 <p:NodeReference LastCategoryFullName="Main.GUIState" LastDependency="VL.GuiState.vl">
                   <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
                   <CategoryReference Kind="RecordType" Name="GUIState" />
                   <Choice Kind="OperationCallFlag" Name="GetScreen" />
                 </p:NodeReference>
                 <Pin Id="HbF7kNEExvjNcA4biyOALb" Name="Input" Kind="StateInputPin" />
+                <Pin Id="DOVPlGhj9eXPcjiDaBycyF" Name="Output" Kind="OutputPin" />
                 <Pin Id="Bxyio0vncGlNlevXNKptYa" Name="ScreenAdd" Kind="OutputPin" />
                 <Pin Id="VHB8UAjExWiPHCSwx4ZwUD" Name="ScreenRemove" Kind="OutputPin" />
                 <Pin Id="Mw68LJPnAD4Mi1j2dbOIDt" Name="ScreenClear" Kind="OutputPin" />
@@ -1074,12 +1087,13 @@
                 <Pin Id="Qfu00MgoVsEPghxLGQvKwv" Name="Output" Kind="StateOutputPin" />
               </Node>
               <ControlPoint Id="HWiqMaA49V3Lequ1VLV1Au" Bounds="1426,1808" />
-              <Node Bounds="815,759,85,26" Id="CuuAjufTi3aNTw6FiHgbHa">
+              <Node Bounds="815,759,105,26" Id="CuuAjufTi3aNTw6FiHgbHa">
                 <p:NodeReference LastCategoryFullName="Main.GUIState" LastDependency="VL.GuiState.vl">
                   <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
                   <Choice Kind="OperationCallFlag" Name="GetMain" />
                 </p:NodeReference>
                 <Pin Id="TOjGXy4aJD1LbLmiH3fogq" Name="Input" Kind="StateInputPin" />
+                <Pin Id="DQoF6bwti74NuoBtNPgrL9" Name="Output" Kind="OutputPin" />
                 <Pin Id="HrwlxlECI5JNeHx1Dre2Uj" Name="Input/Output" Kind="OutputPin" />
                 <Pin Id="JtrtlPO7f1TPAI8ZfFruyS" Name="Point/Transform" Kind="OutputPin" />
                 <Pin Id="Afh97kRgpw0PZgQsOFepIA" Name="File" Kind="OutputPin" />
@@ -1101,6 +1115,7 @@
                   <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
                   <Choice Kind="ProcessAppFlag" Name="MonoFlop (FrameBased)" />
                 </p:NodeReference>
+                <Pin Id="Va31NaMgumgMUJsowJpLyw" Name="Node Context" Kind="InputPin" IsHidden="true" />
                 <Pin Id="KqBkIYMFCfrL3PgUcqYye2" Name="Set" Kind="InputPin" />
                 <Pin Id="E6im3JU6iTUL2zP7i99xe8" Name="Frames" Kind="InputPin" DefaultValue="2" />
                 <Pin Id="VZWPjZoZnkVML7yBfkPU0f" Name="Retriggerable" Kind="InputPin" />
@@ -1130,13 +1145,14 @@
                 <ControlPoint Id="AsJvwyl2VtoMfgeDlKcMw6" Bounds="1308,1459" Alignment="Top" />
                 <ControlPoint Id="Lxai7XVoOM8MuVBLCe6KbZ" Bounds="1308,1509" Alignment="Bottom" />
               </Node>
-              <Node Bounds="1438,1467,145,26" Id="RYB8nx7YntvPF5OwwPkGwT">
+              <Node Bounds="1438,1467,165,26" Id="RYB8nx7YntvPF5OwwPkGwT">
                 <p:NodeReference LastCategoryFullName="Main.GUIState" LastDependency="VL.GuiState.vl">
                   <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
                   <CategoryReference Kind="RecordType" Name="GUIState" />
                   <Choice Kind="OperationCallFlag" Name="GetSlice" />
                 </p:NodeReference>
                 <Pin Id="Dbdvb9ZPLvEOXupJ4Zaw5D" Name="Input" Kind="StateInputPin" />
+                <Pin Id="GOzDLXfr0nON3juEGDRwou" Name="Output" Kind="OutputPin" />
                 <Pin Id="SXYXAH99Wq0L0VpMaXhhNv" Name="SliceAdd" Kind="OutputPin" />
                 <Pin Id="DcBiK8AS55tObItPwOuvdc" Name="SliceRemove" Kind="OutputPin" />
                 <Pin Id="FYnRBqYd1aOOTvEWjsysfk" Name="SliceDuplicate" Kind="OutputPin" />
@@ -1171,11 +1187,12 @@
                 <Pin Id="USjJn9R4EyzOO9TyMWGKWM" Name="Select Points" Kind="InputPin" />
                 <Pin Id="AORrNx2oHSNPYl94w7ReE0" Name="Grids" Kind="OutputPin" />
               </Node>
-              <Node Bounds="1400,848,57,19" Id="CW618Wku25ZLRmEg0A5gje">
-                <p:NodeReference LastCategoryFullName="Control" LastDependency="VL.CoreLib.vl">
+              <Node Bounds="1400,848,99,19" Id="CW618Wku25ZLRmEg0A5gje">
+                <p:NodeReference LastCategoryFullName="Collections" LastDependency="VL.CoreLib.vl">
                   <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
-                  <Choice Kind="ProcessAppFlag" Name="Changed" />
+                  <Choice Kind="ProcessAppFlag" Name="SequenceChanged" />
                 </p:NodeReference>
+                <Pin Id="Rvt6ESFwgE6Pnq1WqKyM7J" Name="Node Context" Kind="InputPin" IsHidden="true" />
                 <Pin Id="UOAh0g4kRRNNH0GUwZwTfW" Name="Value" Kind="InputPin" />
                 <Pin Id="VPtGvvg8UgyLaSKkTRjxxh" Name="Result" Kind="OutputPin" />
                 <Pin Id="EZ8IejRfN9YNY2kMqTKYsw" Name="Unchanged" Kind="OutputPin" />
@@ -1188,13 +1205,28 @@
                 <Pin Id="J45w9OLK7e4QdRw8ekkCTZ" Name="Input" Kind="StateInputPin" />
                 <Pin Id="G3cdgFgRPLPLvPR2H44KTB" Name="Output" Kind="StateOutputPin" />
               </Node>
-              <Node Bounds="1142,1350,103,19" Id="JyLoED4CjXXLnL0meEAT3h">
+              <Node Bounds="1176,1331,103,19" Id="JyLoED4CjXXLnL0meEAT3h">
                 <p:NodeReference LastCategoryFullName="Mapper.Grid.EditableGrids" LastDependency="VL.GridEditor.vl">
                   <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
                   <Choice Kind="OperationCallFlag" Name="FilterDisabledGrids" />
                 </p:NodeReference>
                 <Pin Id="EqZAVMEqHWhPWXrV7jhrh9" Name="Grids" Kind="InputPin" />
                 <Pin Id="IN9d6tD6EOQNuV7iFg0tgZ" Name="Masks" Kind="OutputPin" />
+              </Node>
+              <Node Bounds="1168,1396,31,60" Id="UUOhIQO1HvNORyBviWyl8j">
+                <p:NodeReference LastCategoryFullName="Primitive" LastDependency="Builtin">
+                  <Choice Kind="StatefulRegion" Name="Region (Stateful)" Fixed="true" />
+                  <CategoryReference Kind="Category" Name="Primitive" />
+                  <Choice Kind="ApplicationStatefulRegion" Name="ForEach" />
+                </p:NodeReference>
+                <Pin Id="Cw5RAlTamapOPhohVcV32w" Name="Break" Kind="OutputPin" />
+                <Patch Id="Mq4iepxYZVYO8aKebIKY8Z" ManuallySortedPins="true">
+                  <Patch Id="KE1bM1WPdhJMtL2imJVihL" Name="Create" ManuallySortedPins="true" />
+                  <Patch Id="RffkRuFoqhUQGRapNbxxVc" Name="Update" ManuallySortedPins="true" />
+                  <Patch Id="D1nHkhpxBonNNA1fISCkJO" Name="Dispose" ManuallySortedPins="true" />
+                </Patch>
+                <ControlPoint Id="HSWnlO6yjoCMrMzSX4HQ6K" Bounds="1182,1402" Alignment="Top" />
+                <ControlPoint Id="DPTfo8bOUf4LiIbrBlF6o1" Bounds="1182,1450" Alignment="Bottom" />
               </Node>
             </Canvas>
             <ProcessDefinition Id="An38uNJYuYWNvRAyvnKxrj">
@@ -1326,8 +1358,10 @@
             <Link Id="JSMFVd6EgZVNszlDsZjdBw" Ids="IwNRH2DPZbhMYsORkaLMe0,Hq7KGQap4neL8kfeqQ22hM" />
             <Link Id="FrdmNcK6v91N5Jde2TOAKV" Ids="TcXbl5cWYRVM1egyOtM9yy,P4T6SWFdRL3QcJXd0TRbIH" />
             <Link Id="FzwqsuILiNuOkxOkL93YpM" Ids="FLaPYDIgmtjLjYjSS5XEdK,EqZAVMEqHWhPWXrV7jhrh9" />
-            <Link Id="OGwxHAfJME8LTv3ScHQtay" Ids="IN9d6tD6EOQNuV7iFg0tgZ,ULlGAbDm60jPkJIlLRm4Ty" />
-            <Link Id="CNV6qPwtMHmO2kL0JfFk2C" Ids="IN9d6tD6EOQNuV7iFg0tgZ,C4sXEEcC6LHOdWnYOHv6fN" />
+            <Link Id="D17i11mj4GPOtw1kbHRFv8" Ids="IN9d6tD6EOQNuV7iFg0tgZ,HSWnlO6yjoCMrMzSX4HQ6K" />
+            <Link Id="U8M689q0CDiPmLPzLmBGKa" Ids="HSWnlO6yjoCMrMzSX4HQ6K,DPTfo8bOUf4LiIbrBlF6o1" />
+            <Link Id="HT10BbP132pLEKQHMVbsnk" Ids="DPTfo8bOUf4LiIbrBlF6o1,C4sXEEcC6LHOdWnYOHv6fN" />
+            <Link Id="AemrR1ydn3CPrwx3m2ikNl" Ids="DPTfo8bOUf4LiIbrBlF6o1,ULlGAbDm60jPkJIlLRm4Ty" />
           </Patch>
         </Node>
         <Canvas Id="RPl4d3rHatiMIqHBx8q741" Name="EditableGrids" Position="774,441">
@@ -1395,6 +1429,7 @@
                               <Choice Kind="OperationCallFlag" Name="Split" />
                             </p:NodeReference>
                             <Pin Id="GKMgncwwCKTPhUOPh2KM9n" Name="Input" Kind="StateInputPin" />
+                            <Pin Id="RCPhGP01etuO0mcZ7fLBY3" Name="Output" Kind="OutputPin" IsHidden="true" />
                             <Pin Id="JNVC5exZPBIOHuVgdFHf6v" Name="Points" Kind="OutputPin" />
                             <Pin Id="ATzoeFbAfFDOxtM1H7tfOr" Name="Bounds" Kind="OutputPin" />
                             <Pin Id="HZnOlnCyaMMLdASkMhhv7g" Name="Subdivs" Kind="OutputPin" />
@@ -1402,6 +1437,13 @@
                             <Pin Id="BkC16Ts6aaLMvcNJxLIZte" Name="Selected" Kind="OutputPin" />
                             <Pin Id="BYltePT69YIPWkIaTgvYgw" Name="ScreenId" Kind="OutputPin" />
                             <Pin Id="V8EGlcIskP6NGsHnaCtKlg" Name="Mode" Kind="OutputPin" />
+                            <Pin Id="LVqr3YWCfNWPVJm3qxX5DN" Name="Source" Kind="OutputPin" IsHidden="true" />
+                            <Pin Id="OpuyWHCXmn5PjpsTc8tptU" Name="SoftEdge" Kind="OutputPin" IsHidden="true" />
+                            <Pin Id="JUP4T3lUJGlPr6cJVXsSV0" Name="Gamma" Kind="OutputPin" IsHidden="true" />
+                            <Pin Id="AvJ8UwOUzJQL8L6GnBXDAb" Name="Hidden" Kind="OutputPin" IsHidden="true" />
+                            <Pin Id="E6q4vOeH7fsMqtq1frFhhe" Name="MaskMode" Kind="OutputPin" IsHidden="true" />
+                            <Pin Id="CcmKbVIYINhNLfQ32mYiAI" Name="MaskGridId" Kind="OutputPin" IsHidden="true" />
+                            <Pin Id="OvcKyetDh7GPCMjRifkLEH" Name="Disabled" Kind="OutputPin" IsHidden="true" />
                           </Node>
                           <Node Bounds="886,641,125,19" Id="AVazBBEvsqIPAC7YA2pNT1">
                             <p:NodeReference LastCategoryFullName="Mapper.Grid.EditableGrids" LastDependency="VL.GridEditor.vl">
@@ -1470,6 +1512,7 @@
                           <Choice Kind="OperationCallFlag" Name="GetSelected" />
                         </p:NodeReference>
                         <Pin Id="HOoTDAEru7hPjioOpb2C2K" Name="Input" Kind="StateInputPin" />
+                        <Pin Id="Db6vvIRy2oCOkctSEktBF5" Name="Output" Kind="OutputPin" />
                         <Pin Id="HyZI1LidovvNPQ1uyfy3wv" Name="Selected" Kind="OutputPin" />
                       </Node>
                     </Patch>
@@ -1545,6 +1588,7 @@
                   <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
                   <Choice Kind="ProcessAppFlag" Name="GridSpread (2D)" />
                 </p:NodeReference>
+                <Pin Id="MW4KZ2Hu1UbOGyiWqQA5BM" Name="Node Context" Kind="InputPin" IsHidden="true" />
                 <Pin Id="TCwPqpmfuFUQZCDegmLeqh" Name="Center" Kind="InputPin" />
                 <Pin Id="ATddbjdoB5KPL3iU8ZPTkO" Name="Width" Kind="InputPin" />
                 <Pin Id="KTWbqgfVhB2MxvyfTGNyyI" Name="Alignment" Kind="InputPin" DefaultValue="Block" />
@@ -1593,6 +1637,7 @@
                       <Choice Kind="OperationCallFlag" Name="X" />
                     </p:NodeReference>
                     <Pin Id="PRK7l8qhN2hLeJ7lP0FmMk" Name="Input" Kind="StateInputPin" />
+                    <Pin Id="QDOUir2HUCtLhtbLf4c8ia" Name="Output" Kind="OutputPin" IsHidden="true" />
                     <Pin Id="TEyCoq1xeJcOtagRk3Jafk" Name="X" Kind="OutputPin" />
                   </Node>
                   <Node Bounds="1330,810,145,26" Id="U8y8yxq3uiIOSVNbDOGkDt">
@@ -1601,6 +1646,7 @@
                       <CategoryReference Kind="RecordType" Name="GridPoint" />
                       <Choice Kind="OperationCallFlag" Name="Create" />
                     </p:NodeReference>
+                    <Pin Id="M9yAFspcLj1MxZxMdHMpZx" Name="Node Context" Kind="InputPin" IsHidden="true" />
                     <Pin Id="RQsBgv4JjcYMuqPcMOOrxf" Name="Id" Kind="InputPin" />
                     <Pin Id="TrNl9znogVhP34OsWJ8kkY" Name="GridId" Kind="InputPin" />
                     <Pin Id="UuLGGOFc9M3MYfJVxB2tUN" Name="GridSelected" Kind="InputPin" />
@@ -2031,6 +2077,7 @@
                           <Choice Kind="OperationCallFlag" Name="GetPoints" />
                         </p:NodeReference>
                         <Pin Id="I79n6zzPMXqPdxt55bCdRp" Name="Input" Kind="StateInputPin" />
+                        <Pin Id="Sfhp1ZckCABOTEgSV0fbKs" Name="Output" Kind="OutputPin" />
                         <Pin Id="QtbK8AYOfkKO0GJdq1fbDf" Name="Points" Kind="OutputPin" />
                       </Node>
                       <Node Bounds="465,501,163,283" Id="VpX7mnrAwTXLrAmKIJTf23">
@@ -2053,6 +2100,7 @@
                               <Choice Kind="OperationCallFlag" Name="GetId" />
                             </p:NodeReference>
                             <Pin Id="JiIVJRTBPylLK7vJikeKlV" Name="Input" Kind="StateInputPin" />
+                            <Pin Id="D3Ow3nkLX2RQCQtDDwqRe8" Name="Output" Kind="OutputPin" />
                             <Pin Id="Czj8ESI2m2SOd5qUgGBAYr" Name="Id" Kind="OutputPin" />
                           </Node>
                           <Node Bounds="529,563,77,19" Id="ClRZL1KsVQuLdl20CrOt8z">
@@ -2232,6 +2280,7 @@
                           <Choice Kind="OperationCallFlag" Name="GetId" />
                         </p:NodeReference>
                         <Pin Id="R3FLJFZMJonQKeza1M9sLB" Name="Input" Kind="StateInputPin" />
+                        <Pin Id="VwVz65ev7dTMjcxJjGTBJP" Name="Output" Kind="OutputPin" />
                         <Pin Id="IIrjIGJ5eZ8LhvF2kydB5V" Name="Id" Kind="OutputPin" />
                       </Node>
                       <Node Bounds="475,1127,25,19" Id="JksCqQnY42oPkAoQQ7kNpj">
@@ -2367,6 +2416,7 @@
                       <Choice Kind="OperationCallFlag" Name="GetId" />
                     </p:NodeReference>
                     <Pin Id="D2fZ3lBttJhPNKrIvM3PkI" Name="Input" Kind="StateInputPin" />
+                    <Pin Id="NJpn0drgI4ANCvxe7ICoLN" Name="Output" Kind="OutputPin" />
                     <Pin Id="FG3dSqgLWncP6lNVKYSyMT" Name="Id" Kind="OutputPin" />
                   </Node>
                   <Node Bounds="760,1144,25,19" Id="MoZ1Tc5X0cbLIvJ8FUdqu0">
@@ -2409,11 +2459,20 @@
                   <CategoryReference Kind="RecordType" Name="EditableGrid" />
                   <Choice Kind="OperationCallFlag" Name="Create" />
                 </p:NodeReference>
+                <Pin Id="QjoSHAvFy1nNNJV4yO5Atd" Name="Node Context" Kind="InputPin" IsHidden="true" />
                 <Pin Id="ORgKmbzToQLLycd1xIDsFb" Name="Size" Kind="InputPin" />
                 <Pin Id="VWwJ5QrpApyOhEcWnDtz6f" Name="Id" Kind="InputPin" DefaultValue="-1" />
                 <Pin Id="SlNBjq5GRbTMvZhZ10nSTI" Name="IdStore" Kind="InputPin" />
                 <Pin Id="PvQcHq4bH1tPz5sGg8Chab" Name="ScreenId" Kind="InputPin" />
                 <Pin Id="K4lcmrkiYXHNOl7DllxHob" Name="Output" Kind="StateOutputPin" />
+                <Pin Id="VtfM3CCaiDyNjJXagVQVFG" Name="Mode" Kind="InputPin" IsHidden="true" />
+                <Pin Id="AoYODpC9y0ON0IQwi7JUk4" Name="Source" Kind="InputPin" IsHidden="true" />
+                <Pin Id="AwraLGhXwApM6F2blUhPCw" Name="SoftEdge" Kind="InputPin" IsHidden="true" />
+                <Pin Id="GYDBHUGpMqVOrvJTlJD0d1" Name="Gamma" Kind="InputPin" IsHidden="true" />
+                <Pin Id="HNZ6Pbq0vEvM2rrVvBQYbI" Name="Hidden" Kind="InputPin" IsHidden="true" />
+                <Pin Id="JznQFwDSusCMKVeE5haZiZ" Name="MaskMode" Kind="InputPin" IsHidden="true" />
+                <Pin Id="FDXjL01AqOnPBaX3S0LrSw" Name="MaskGridId" Kind="InputPin" IsHidden="true" />
+                <Pin Id="OQZTkZ0SUo4Lru8iXqiQzN" Name="Disabled" Kind="InputPin" IsHidden="true" />
               </Node>
               <Link Id="Ubw3pzwWaNIQXpRdISVhuE" Ids="K4lcmrkiYXHNOl7DllxHob,IJkJxGelJaeLs3cT5YQrAX" />
               <Node Bounds="834,1222,44,26" Id="Gur7rsBdnb7NV24LO3tNwf">
@@ -2490,11 +2549,20 @@
                       <CategoryReference Kind="RecordType" Name="EditableGrid" />
                       <Choice Kind="OperationCallFlag" Name="Create" />
                     </p:NodeReference>
+                    <Pin Id="H1g5lN8XWXzNReaeQjk5Xe" Name="Node Context" Kind="InputPin" IsHidden="true" />
                     <Pin Id="O54HPTZXrMCQEVz2B1p41J" Name="Size" Kind="InputPin" />
                     <Pin Id="TUlRzRi7Z7tM3SLWxlxoPc" Name="Id" Kind="InputPin" />
                     <Pin Id="Dljr7AmSuzqOE1btHShN3Y" Name="IdStore" Kind="InputPin" />
                     <Pin Id="P4oyYxf1aC9NI8StfE5yEW" Name="ScreenId" Kind="InputPin" />
                     <Pin Id="IH0wtUfeXuKM8kFiRmmZUQ" Name="Output" Kind="OutputPin" />
+                    <Pin Id="VA20HY2Oy02NZ0WHOkuDzW" Name="Mode" Kind="InputPin" IsHidden="true" />
+                    <Pin Id="Cqb4R0OCjNJP9MT3cKCvng" Name="Source" Kind="InputPin" IsHidden="true" />
+                    <Pin Id="RAwrfysIhBJPcmzeOT1ZeQ" Name="SoftEdge" Kind="InputPin" IsHidden="true" />
+                    <Pin Id="TOjrH7dE55HO5rDHkVKBVG" Name="Gamma" Kind="InputPin" IsHidden="true" />
+                    <Pin Id="E5enh8MEEeMOmkzQIO1pqC" Name="Hidden" Kind="InputPin" IsHidden="true" />
+                    <Pin Id="IpNtlW28slmLZa478OH3iz" Name="MaskMode" Kind="InputPin" IsHidden="true" />
+                    <Pin Id="P9LH3zB8PpMOVfseTCZs4x" Name="MaskGridId" Kind="InputPin" IsHidden="true" />
+                    <Pin Id="Exx0fCKWsuGPIeaVYox99A" Name="Disabled" Kind="InputPin" IsHidden="true" />
                   </Node>
                   <Node Bounds="1073,1178,41,26" Id="EN38gjTal0cOHRq9Rkpf32">
                     <p:NodeReference LastCategoryFullName="Collections.Spread" LastDependency="VL.CoreLib.vl">
@@ -2629,6 +2697,7 @@
                           <Choice Kind="OperationCallFlag" Name="GetId" />
                         </p:NodeReference>
                         <Pin Id="VKExXBMfO2OOnkZDXSRZ1E" Name="Input" Kind="StateInputPin" />
+                        <Pin Id="TBMg9WD3fT3QZRP1qoTJS4" Name="Output" Kind="OutputPin" />
                         <Pin Id="Ttj9hqM5Zq8OCDbi9h3mbe" Name="Id" Kind="OutputPin" />
                       </Node>
                     </Patch>
@@ -2789,6 +2858,7 @@
                       <Choice Kind="OperationCallFlag" Name="GetSelected" />
                     </p:NodeReference>
                     <Pin Id="D717WHGutW0OlsT9Fa7FbE" Name="Input" Kind="StateInputPin" />
+                    <Pin Id="JBVTXLgVEYvM3M98VcBOTu" Name="Output" Kind="OutputPin" />
                     <Pin Id="RXzW97ZLmGiMfA4Y1dz8vG" Name="Selected" Kind="OutputPin" />
                   </Node>
                 </Patch>
@@ -2857,6 +2927,7 @@
                       <Choice Kind="OperationCallFlag" Name="GetScreenId" />
                     </p:NodeReference>
                     <Pin Id="VmzHqzdToYDLllhcqv2lY2" Name="Input" Kind="StateInputPin" />
+                    <Pin Id="STWCLUK6dscLWVyRjANfPB" Name="Output" Kind="OutputPin" />
                     <Pin Id="K4HMK8gnsHcLgWGCLvdcDo" Name="ScreenId" Kind="OutputPin" />
                   </Node>
                   <Node Bounds="265,1673,25,19" Id="LL2dYlwHTJtL4V4eCfnm98">
@@ -2975,6 +3046,7 @@
                           <Choice Kind="OperationCallFlag" Name="GetSelected" />
                         </p:NodeReference>
                         <Pin Id="G8XQ0CSowglPrWcH5YGFbq" Name="Input" Kind="StateInputPin" />
+                        <Pin Id="MIqxD7GF3qlMtT4g4ChPDx" Name="Output" Kind="OutputPin" />
                         <Pin Id="K6dPZyaS7wpMEOAbF5dvHd" Name="Selected" Kind="OutputPin" />
                       </Node>
                     </Patch>
@@ -2992,6 +3064,7 @@
                   <Choice Kind="OperationCallFlag" Name="GetParamsSlice" />
                 </p:NodeReference>
                 <Pin Id="LtdHEBDA0HvNmguooAkGkb" Name="Input" Kind="StateInputPin" />
+                <Pin Id="BG4pjDtWAFPNM4kRAniQR5" Name="Output" Kind="OutputPin" />
                 <Pin Id="SvF8360ks1kL2gWsKHaVz9" Name="SliceParamPosition" Kind="OutputPin" />
                 <Pin Id="EFiRnORw47VOgyQWtK0TQw" Name="SliceParamSize" Kind="OutputPin" />
                 <Pin Id="NDfFOzaxzcDNKgXI545elT" Name="SliceParamSubdivs" Kind="OutputPin" />
@@ -3009,6 +3082,7 @@
                   <Choice Kind="OperationCallFlag" Name="Split" />
                 </p:NodeReference>
                 <Pin Id="Cwxuyo1ZTUeMrVJWn8X8dy" Name="Input" Kind="StateInputPin" />
+                <Pin Id="F9MvAPmHuLlOzjTpT0iHrD" Name="Output" Kind="OutputPin" IsHidden="true" />
                 <Pin Id="SJ6gS75IK8jNrxQTTHD6O4" Name="Param" Kind="OutputPin" />
                 <Pin Id="OuryQi9AFGrPDD6zgKc2Yt" Name="Bang" Kind="OutputPin" />
               </Node>
@@ -3078,6 +3152,7 @@
                   <Choice Kind="OperationCallFlag" Name="GetParamsSlice" />
                 </p:NodeReference>
                 <Pin Id="IAoaRQqjYM6Ov9jRk23jPR" Name="Input" Kind="StateInputPin" />
+                <Pin Id="R7dBpF62RcxP8Ch4M4Q0SQ" Name="Output" Kind="OutputPin" />
                 <Pin Id="Bzf66RhFiawLAXhPPai2CV" Name="SliceParamPosition" Kind="OutputPin" />
                 <Pin Id="DmXB2w9WMpROKjzyDAKyoX" Name="SliceParamSize" Kind="OutputPin" />
                 <Pin Id="IxvCrrdzXR7OBRmZvQUvli" Name="SliceParamSubdivs" Kind="OutputPin" />
@@ -3095,6 +3170,7 @@
                   <Choice Kind="OperationCallFlag" Name="Split" />
                 </p:NodeReference>
                 <Pin Id="VYO0TIVsXmBQMLL3HP1qDS" Name="Input" Kind="StateInputPin" />
+                <Pin Id="SQf0it1LEN3MP7SclQzArt" Name="Output" Kind="OutputPin" IsHidden="true" />
                 <Pin Id="AAU8Pj0mtZcN4FMtUJKpQZ" Name="Param" Kind="OutputPin" />
                 <Pin Id="DwyAKlYayYmMtS7kBcwMIa" Name="Bang" Kind="OutputPin" />
               </Node>
@@ -3105,6 +3181,7 @@
                   <Choice Kind="OperationCallFlag" Name="Split" />
                 </p:NodeReference>
                 <Pin Id="JZdgaQ3hkPyNphnkUX7pj0" Name="Input" Kind="StateInputPin" />
+                <Pin Id="IFxk8cc1gNPPo5n3Qpiq2e" Name="Output" Kind="OutputPin" IsHidden="true" />
                 <Pin Id="Lwz76FZyTbNM4rhmQgmWsa" Name="Param" Kind="OutputPin" />
                 <Pin Id="QepPjq9J85DPCe1NSYXZvD" Name="Bang" Kind="OutputPin" />
               </Node>
@@ -3140,6 +3217,7 @@
                           <Choice Kind="OperationCallFlag" Name="GetSelected" />
                         </p:NodeReference>
                         <Pin Id="IJIcROSpV8UN9Y2wm2cROI" Name="Input" Kind="StateInputPin" />
+                        <Pin Id="LjsNow9mpSjP4p5G3yqIch" Name="Output" Kind="OutputPin" />
                         <Pin Id="DH7C7ItrOYKPV7sOFGUQxV" Name="Selected" Kind="OutputPin" />
                       </Node>
                       <Node Bounds="1097,1787,148,101" Id="UTcVUaPXmJNNOviBb3RAbs">
@@ -3211,6 +3289,7 @@
                           <Choice Kind="OperationCallFlag" Name="GetSelected" />
                         </p:NodeReference>
                         <Pin Id="MbShSnVsZgPOb11BSbMMrF" Name="Input" Kind="StateInputPin" />
+                        <Pin Id="VbcpJbEhdRaOHrGrChdlF8" Name="Output" Kind="OutputPin" />
                         <Pin Id="Ql4XpQPaoHdQHH211EAeDw" Name="Selected" Kind="OutputPin" />
                       </Node>
                       <Node Bounds="1097,2070,148,119" Id="Gp3y8aRSCtYMIao3ZqR2Xq">
@@ -3472,6 +3551,7 @@
                           <Choice Kind="OperationCallFlag" Name="GetEditablePointsAll" />
                         </p:NodeReference>
                         <Pin Id="D6sG0g7aBSDNCCzECvjzFH" Name="Input" Kind="StateInputPin" />
+                        <Pin Id="FFldTT6OhfuOfyAuc9GzMk" Name="Output" Kind="OutputPin" />
                         <Pin Id="UYJhtweJG5PPzJ3SfFWMhN" Name="Points" Kind="OutputPin" />
                       </Node>
                       <Node Bounds="1640,1964,106,26" Id="FK4rEGgh7GsNxKLPjGCcOT">
@@ -3494,6 +3574,7 @@
                       <Choice Kind="OperationCallFlag" Name="GetPoints" />
                     </p:NodeReference>
                     <Pin Id="KSCp63SwrYNN4gcujpgMyD" Name="Input" Kind="StateInputPin" />
+                    <Pin Id="UefQmVEqOuUL5gdhrvVNaY" Name="Output" Kind="OutputPin" />
                     <Pin Id="BzejI5kYkgfMhbVPYl2Jpz" Name="Points" Kind="OutputPin" />
                   </Node>
                   <Node Bounds="1585,2017,60,26" Id="T2mXfh3994gL2w3ACFMQIh">
@@ -3636,11 +3717,20 @@
                   <CategoryReference Kind="RecordType" Name="EditableGrid" />
                   <Choice Kind="OperationCallFlag" Name="Create" />
                 </p:NodeReference>
+                <Pin Id="OQ5vkNOyMkzNMfacvgQBQx" Name="Node Context" Kind="InputPin" IsHidden="true" />
                 <Pin Id="CPnQWFkCf4xQGyrnySEmN6" Name="Size" Kind="InputPin" />
                 <Pin Id="Tz9tn6JtIILMOvBGkFhDah" Name="Id" Kind="InputPin" DefaultValue="-1" />
                 <Pin Id="JQdqMzZFfscMAbryg7umyX" Name="IdStore" Kind="InputPin" />
                 <Pin Id="Jzm1QCT6zL1OoadOq1XIF6" Name="ScreenId" Kind="InputPin" />
                 <Pin Id="Scs55eAHYyHLptXkGmZlar" Name="Output" Kind="StateOutputPin" />
+                <Pin Id="Rx0QFCNSqFrOH4Jxh4Yud5" Name="Mode" Kind="InputPin" IsHidden="true" />
+                <Pin Id="SXyT0uKF9yDNilmMVTarok" Name="Source" Kind="InputPin" IsHidden="true" />
+                <Pin Id="MG6MZUhL5H4P5d0kPUf1gi" Name="SoftEdge" Kind="InputPin" IsHidden="true" />
+                <Pin Id="QmAcAdccziDPaUg2wwtQSa" Name="Gamma" Kind="InputPin" IsHidden="true" />
+                <Pin Id="THTb1zLqIeqLqkcCtgd1La" Name="Hidden" Kind="InputPin" IsHidden="true" />
+                <Pin Id="DOXf5Gi7QHLL7Kf1sXBrW7" Name="MaskMode" Kind="InputPin" IsHidden="true" />
+                <Pin Id="RHSBn5ZcrX8L7uBuGiCCdN" Name="MaskGridId" Kind="InputPin" IsHidden="true" />
+                <Pin Id="VronPU1oHWMOSrGd3hiMnl" Name="Disabled" Kind="InputPin" IsHidden="true" />
               </Node>
               <Link Id="PQlo4odGkpkOD1pzCzMm68" Ids="Scs55eAHYyHLptXkGmZlar,QxFuSAeJPckLS0oqFzW02W" />
             </Patch>
@@ -3690,6 +3780,7 @@
                           <Choice Kind="OperationCallFlag" Name="GetSelected" />
                         </p:NodeReference>
                         <Pin Id="KFahhftVKItNfrjVpFKcED" Name="Input" Kind="StateInputPin" />
+                        <Pin Id="VWdAk763JKpM3HR7dzLhHG" Name="Output" Kind="OutputPin" />
                         <Pin Id="EodmL9N2t7MMTmhuiUmxtX" Name="Selected" Kind="OutputPin" />
                       </Node>
                       <Node Bounds="2146,1751,61,26" Id="GfT8PVeR15uNQO35BZAJzN">
@@ -3714,6 +3805,7 @@
                   <Choice Kind="OperationCallFlag" Name="GetParamsSlice" />
                 </p:NodeReference>
                 <Pin Id="VOQXwW99jIhLxTHWNbioCG" Name="Input" Kind="StateInputPin" />
+                <Pin Id="M4RPPGQVNymLf3UurhehrR" Name="Output" Kind="OutputPin" />
                 <Pin Id="EJY6LtLmnY2Pod7g09U33r" Name="SliceParamPosition" Kind="OutputPin" />
                 <Pin Id="JptGwc1hBayOUjMJbpkbbJ" Name="SliceParamSize" Kind="OutputPin" />
                 <Pin Id="QFPC02OSAb1Mdc4t9NMsZe" Name="SliceParamSubdivs" Kind="OutputPin" />
@@ -3731,6 +3823,7 @@
                   <Choice Kind="OperationCallFlag" Name="Split" />
                 </p:NodeReference>
                 <Pin Id="LlpopAoubjSPwak49ytG4T" Name="Input" Kind="StateInputPin" />
+                <Pin Id="NXE1DU41SOFMxbg6pcZH2V" Name="Output" Kind="OutputPin" IsHidden="true" />
                 <Pin Id="JnfOLR3AvKUQU2Jg783qU9" Name="Param" Kind="OutputPin" />
                 <Pin Id="HfPijWWGtihOJDZ2h3GGfb" Name="Bang" Kind="OutputPin" />
               </Node>
@@ -3802,6 +3895,7 @@
                           <Choice Kind="OperationCallFlag" Name="GetSelected" />
                         </p:NodeReference>
                         <Pin Id="Scmh4C2Nl7sPWwjG3Zcs4X" Name="Input" Kind="StateInputPin" />
+                        <Pin Id="RMKNXkTCWMpNgP6VCwpkpc" Name="Output" Kind="OutputPin" />
                         <Pin Id="ByBHF7x4AbLMd7v9cHx7kA" Name="Selected" Kind="OutputPin" />
                       </Node>
                       <Node Bounds="2146,1928,70,26" Id="MgMggVWmGTDNreh0j4sSKn">
@@ -3855,6 +3949,7 @@
                           <Choice Kind="OperationCallFlag" Name="GetSelected" />
                         </p:NodeReference>
                         <Pin Id="BJAM52NGtOTPQPq0cyI32O" Name="Input" Kind="StateInputPin" />
+                        <Pin Id="RsoMjB2RuIpNdVoq1XXbxH" Name="Output" Kind="OutputPin" />
                         <Pin Id="QBGEgmXh84mP4ol8LboJtS" Name="Selected" Kind="OutputPin" />
                       </Node>
                       <Node Bounds="2146,2111,65,26" Id="HnXymvyfw4uMVW6rNdV0r2">
@@ -3885,6 +3980,7 @@
                   <Choice Kind="OperationCallFlag" Name="Split" />
                 </p:NodeReference>
                 <Pin Id="REe0PIadRCJMOwbpfvhvR3" Name="Input" Kind="StateInputPin" />
+                <Pin Id="PBz6huchML0ObO4Mv2M1jT" Name="Output" Kind="OutputPin" IsHidden="true" />
                 <Pin Id="NWI6LsEURZbQaLiAPxDyKk" Name="Param" Kind="OutputPin" />
                 <Pin Id="CFbLnDQxSXTLFZI5GreyEG" Name="Bang" Kind="OutputPin" />
               </Node>
@@ -3895,6 +3991,7 @@
                   <Choice Kind="OperationCallFlag" Name="Split" />
                 </p:NodeReference>
                 <Pin Id="OR5464V3r70NoQmvVSC2Rt" Name="Input" Kind="StateInputPin" />
+                <Pin Id="UkcusYwUdOONA86pN7Y7Nn" Name="Output" Kind="OutputPin" IsHidden="true" />
                 <Pin Id="GQQL9rLNmYwNxvKnut1Sme" Name="Param" Kind="OutputPin" />
                 <Pin Id="LV53wvSL3c5MpApuKEzTqL" Name="Bang" Kind="OutputPin" />
               </Node>
@@ -3934,6 +4031,7 @@
                           <Choice Kind="OperationCallFlag" Name="GetSelected" />
                         </p:NodeReference>
                         <Pin Id="JbQXU0J8m5yQa1awRV1cW7" Name="Input" Kind="StateInputPin" />
+                        <Pin Id="JaOTQqv2gd7MgznfhQOcw8" Name="Output" Kind="OutputPin" />
                         <Pin Id="NdAAMsAgpdcOVdqNXNB8Dv" Name="Selected" Kind="OutputPin" />
                       </Node>
                       <Node Bounds="2146,2291,65,26" Id="SjKsIjZmWxMNE3d1yaqxKQ">
@@ -3963,6 +4061,7 @@
                   <Choice Kind="OperationCallFlag" Name="Split" />
                 </p:NodeReference>
                 <Pin Id="CbgaWdTaAAFLnhwPka2yFP" Name="Input" Kind="StateInputPin" />
+                <Pin Id="RHZPLeGHXZ5Pdm1LHMod87" Name="Output" Kind="OutputPin" IsHidden="true" />
                 <Pin Id="ARPaBz8nUa9MYSAZGFkYEL" Name="Param" Kind="OutputPin" />
                 <Pin Id="QhrbogHwQXGNjmXIybuzT3" Name="Bang" Kind="OutputPin" />
               </Node>
@@ -4016,6 +4115,7 @@
                           <Choice Kind="OperationCallFlag" Name="GetSelected" />
                         </p:NodeReference>
                         <Pin Id="LJijqwnmzZ0MymbzLq4cHN" Name="Input" Kind="StateInputPin" />
+                        <Pin Id="NFR52gWcR30LczzxJD9IMB" Name="Output" Kind="OutputPin" />
                         <Pin Id="Fjz8mWiUEpFLUoU35hhaaf" Name="Selected" Kind="OutputPin" />
                       </Node>
                       <Node Bounds="2146,2458,78,26" Id="BIGEOAhckEQPVwM2s5wct4">
@@ -4049,6 +4149,7 @@
                   <Choice Kind="OperationCallFlag" Name="Split" />
                 </p:NodeReference>
                 <Pin Id="Bjo3A9aHYXGLTrsXtJ1RH5" Name="Input" Kind="StateInputPin" />
+                <Pin Id="KX5wtStTqzVN1NDWsUocMT" Name="Output" Kind="OutputPin" IsHidden="true" />
                 <Pin Id="AyFkERqzU6DNVGTMj7iq4x" Name="Param" Kind="OutputPin" />
                 <Pin Id="DwKAY90TPhLNuveAq4L4b9" Name="Bang" Kind="OutputPin" />
               </Node>
@@ -4076,6 +4177,7 @@
                     <Choice Kind="OperationCallFlag" Name="GetPoints" />
                   </p:NodeReference>
                   <Pin Id="VSN7jhl3TBJMtGfUGkLDM0" Name="Input" Kind="StateInputPin" />
+                  <Pin Id="MlHSi436RH5L9QZvK0vDHj" Name="Output" Kind="OutputPin" />
                   <Pin Id="CWFypy7fCGMMbLgqGI4qbD" Name="Points" Kind="OutputPin" />
                 </Node>
                 <Node Bounds="1087,545,158,108" Id="LxaR00ruFpKO2YDCMnlqtw">
@@ -4096,6 +4198,7 @@
                         <Choice Kind="OperationCallFlag" Name="GetEditablePointsPos (Split)" />
                       </p:NodeReference>
                       <Pin Id="SgmiG5nUZ8rL2qydISxr1W" Name="Input" Kind="StateInputPin" />
+                      <Pin Id="RC0GVEQh0X1PQtT1zZrDOs" Name="Output" Kind="OutputPin" />
                       <Pin Id="VwcOWrOi6vRMa7NXjxdjFx" Name="Point" Kind="OutputPin" />
                       <Pin Id="LarULSSDCHCL2nEHnoVyUP" Name="Control1" Kind="OutputPin" />
                       <Pin Id="B2uEVRUCqFYOakq9Dl4Nbt" Name="Control2" Kind="OutputPin" />
@@ -4125,6 +4228,8 @@
                     <CategoryReference Kind="Category" Name="Control" NeedsToBeDirectParent="true" />
                     <Choice Kind="ProcessAppFlag" Name="Changed" />
                   </p:NodeReference>
+                  <Pin Id="PVBFQmRws23MVp3XqPiUPA" Name="Node Context" Kind="InputPin" IsHidden="true" />
+                  <Pin Id="Jjc77PUx3FaMFg8cLtPsbf" Name="Changed On Create" Kind="InputPin" IsHidden="true" />
                   <Pin Id="EX28gFdUrIYPL9Me2qe787" Name="Value" Kind="InputPin" />
                   <Pin Id="S7kiv0nhXqSNyHlcVVuH3X" Name="Result" Kind="OutputPin" />
                   <Pin Id="Kd8RBmnqH6AOdB5ggU69DT" Name="Unchanged" Kind="OutputPin" />
@@ -4137,6 +4242,7 @@
                     <Choice Kind="OperationCallFlag" Name="GetHidden" />
                   </p:NodeReference>
                   <Pin Id="CsNOGgYAVEALL2fJuwyNux" Name="Input" Kind="StateInputPin" />
+                  <Pin Id="DeBFLIpvCH2MLpnFXjHZb4" Name="Output" Kind="OutputPin" />
                   <Pin Id="ABrW1shn7kQM59FufUaUjZ" Name="Hidden" Kind="OutputPin" />
                 </Node>
                 <Node Bounds="1282,669,57,19" Id="N1BQ72GA3MhPEtFsHHEyxP">
@@ -4145,6 +4251,8 @@
                     <CategoryReference Kind="Category" Name="Control" NeedsToBeDirectParent="true" />
                     <Choice Kind="ProcessAppFlag" Name="Changed" />
                   </p:NodeReference>
+                  <Pin Id="IU8MDSY8LlHLiyQs2M63Gg" Name="Node Context" Kind="InputPin" IsHidden="true" />
+                  <Pin Id="UWPDBToD1G4PN19MllsoEh" Name="Changed On Create" Kind="InputPin" IsHidden="true" />
                   <Pin Id="FSsAUTHOGGYOeiyq1L7XoS" Name="Value" Kind="InputPin" />
                   <Pin Id="AL7VkxRBLn9NDTeqFbH1rt" Name="Result" Kind="OutputPin" />
                   <Pin Id="B4aQXUGcRJYNAknoMoAz6g" Name="Unchanged" Kind="OutputPin" />
@@ -4165,6 +4273,7 @@
                     <Choice Kind="OperationCallFlag" Name="GetMaskMode" />
                   </p:NodeReference>
                   <Pin Id="FT6Aa0oc1srOsSX8zjWWJ4" Name="Input" Kind="StateInputPin" />
+                  <Pin Id="AIERohuQbMvNxqDbpoD96B" Name="Output" Kind="OutputPin" />
                   <Pin Id="FXAP94557PvQd8jrafQsFD" Name="MaskMode" Kind="OutputPin" />
                 </Node>
                 <Node Bounds="1375,669,57,19" Id="J6Wepd7ENcVLVCHd1IjzRq">
@@ -4173,6 +4282,8 @@
                     <CategoryReference Kind="Category" Name="Control" NeedsToBeDirectParent="true" />
                     <Choice Kind="ProcessAppFlag" Name="Changed" />
                   </p:NodeReference>
+                  <Pin Id="EjUnbZmNYkUNELWr36y8fv" Name="Node Context" Kind="InputPin" IsHidden="true" />
+                  <Pin Id="UvLMyhjTyrcMX75zaVVHCq" Name="Changed On Create" Kind="InputPin" IsHidden="true" />
                   <Pin Id="IjlfYyo8xCpMof5DzU2wFZ" Name="Value" Kind="InputPin" />
                   <Pin Id="O3hogvmmxROOenMUZpzQA8" Name="Result" Kind="OutputPin" />
                   <Pin Id="ASs4D3Ypj4bL4H8sIHCog8" Name="Unchanged" Kind="OutputPin" />
@@ -4249,10 +4360,17 @@
                       <CategoryReference Kind="RecordType" Name="EditableGrid" />
                       <Choice Kind="OperationCallFlag" Name="Create" />
                     </p:NodeReference>
+                    <Pin Id="RIpp6vBy4wqPVUVwmtFE7D" Name="Node Context" Kind="InputPin" IsHidden="true" />
                     <Pin Id="IazXPakP00ZQMh7XgRObA4" Name="Size" Kind="InputPin" />
                     <Pin Id="IQSCvL78zV3QTqeosTaJ8b" Name="Id" Kind="InputPin" />
                     <Pin Id="SD2ZCAlHVDhN6qynPoZfuw" Name="IdStore" Kind="InputPin" />
                     <Pin Id="VjQmdBH1R2ENhT8gOzGfSZ" Name="ScreenId" Kind="InputPin" />
+                    <Pin Id="OG4rSc3FJWCLD4qq2NRP8d" Name="Mode" Kind="InputPin" IsHidden="true" />
+                    <Pin Id="I4O1uWt5Xr0N5SNhcp4Ohf" Name="Source" Kind="InputPin" IsHidden="true" />
+                    <Pin Id="C9BWhXYjysVQLlQ7dATYJR" Name="SoftEdge" Kind="InputPin" IsHidden="true" />
+                    <Pin Id="U6qfn8E9fLOO4F96doZNZW" Name="Gamma" Kind="InputPin" IsHidden="true" />
+                    <Pin Id="JqGAecOvqdxNfimP0Yf1dU" Name="Hidden" Kind="InputPin" IsHidden="true" />
+                    <Pin Id="CRjHotfcyS4NnCP45Rgoe8" Name="MaskMode" Kind="InputPin" IsHidden="true" />
                     <Pin Id="FmAeBDI6C8lOhCAaHY1lgA" Name="MaskGridId" Kind="InputPin" />
                     <Pin Id="QOJggbgEaBoMVCzG9i8i5F" Name="Disabled" Kind="InputPin" />
                     <Pin Id="STMuN9q5We6PPnpVH39Cqc" Name="Output" Kind="OutputPin" />
@@ -4305,6 +4423,7 @@
                       <Choice Kind="OperationCallFlag" Name="GetBounds" />
                     </p:NodeReference>
                     <Pin Id="O4FdOoo5R65MesoU1rGX3b" Name="Input" Kind="StateInputPin" />
+                    <Pin Id="Jh3EcHregxCM3fnMRkCNTt" Name="Output" Kind="OutputPin" />
                     <Pin Id="UPQfhtzVskyO1B2PeuV0fm" Name="Bounds" Kind="OutputPin" />
                   </Node>
                   <Node Bounds="2643,1009,66,26" Id="N2xU7WP16EdLYnrWQBS8pT">
@@ -4469,6 +4588,7 @@
                       <Choice Kind="OperationCallFlag" Name="GetMaskGridId" />
                     </p:NodeReference>
                     <Pin Id="EvVGqaYeThzPccRHJgfo0I" Name="Input" Kind="StateInputPin" />
+                    <Pin Id="CnfYmNIeKjyOUm6P94Ta2K" Name="Output" Kind="OutputPin" />
                     <Pin Id="HP6RRjMkagbQBtRlKJFks0" Name="MaskGridId" Kind="OutputPin" />
                   </Node>
                   <Pin Id="U9ehFWkRyskQIgluiZx68b" Name="Input 1" Kind="InputPin" />
@@ -4492,6 +4612,7 @@
                   <Choice Kind="OperationCallFlag" Name="GetId" />
                 </p:NodeReference>
                 <Pin Id="PoaXBeGhBYZNSW0fImtoqM" Name="Input" Kind="StateInputPin" />
+                <Pin Id="HVXXMCi0YhmOAA4asseHwZ" Name="Output" Kind="OutputPin" />
                 <Pin Id="LL9lVRugQjOMq0HmDnHveE" Name="Id" Kind="OutputPin" />
               </Node>
               <Link Id="KWZcHuxCQY2PcSlCi954cG" Ids="U9ehFWkRyskQIgluiZx68b,MXueMErojX3NflXKOZ4FDU" IsHidden="true" />
@@ -4569,6 +4690,7 @@
                       <Choice Kind="OperationCallFlag" Name="GetMaskGridId" />
                     </p:NodeReference>
                     <Pin Id="Mzb1QgRLHo9Nino0xRx5vq" Name="Input" Kind="StateInputPin" />
+                    <Pin Id="Cd5yV7xseyqMmZLf8lIEVP" Name="Output" Kind="OutputPin" />
                     <Pin Id="KI3kLPpOPpcNY0JVCQ4XZ8" Name="MaskGridId" Kind="OutputPin" />
                   </Node>
                   <Node Bounds="2982,885,25,19" Id="Bb7tdHjnvXeLiNyKXAMvvM">
@@ -4612,6 +4734,7 @@
                       <Choice Kind="OperationCallFlag" Name="GetMaskGridId" />
                     </p:NodeReference>
                     <Pin Id="ERCaF0UkiDgNosanuyCG9T" Name="Input" Kind="StateInputPin" />
+                    <Pin Id="KjvQx8HOxkPNbWsZW7jWOg" Name="Output" Kind="OutputPin" />
                     <Pin Id="QmJNX8KXI3mNRzFhc4zaQ3" Name="MaskGridId" Kind="OutputPin" />
                   </Node>
                   <Node Bounds="3131,885,25,19" Id="GBVBb2Gef9SK9nt6ErDL5A">
@@ -4679,6 +4802,7 @@
                       <Choice Kind="OperationCallFlag" Name="GetMaskMode" />
                     </p:NodeReference>
                     <Pin Id="VcxKADtnTb2LG5hReFrQ55" Name="Input" Kind="StateInputPin" />
+                    <Pin Id="ApfIC7S8SCjNFWGpNlbNOl" Name="Output" Kind="OutputPin" />
                     <Pin Id="NwEKzkNYJ00PYWxCbDX6AZ" Name="MaskMode" Kind="OutputPin" />
                   </Node>
                   <Node Bounds="2988,1122,25,19" Id="TvNBbU9BfJaNSSpUWgs4Nd">
@@ -4721,6 +4845,7 @@
                       <Choice Kind="OperationCallFlag" Name="GetMaskMode" />
                     </p:NodeReference>
                     <Pin Id="J1j0Q0dmLg6OgVa8eqsKcY" Name="Input" Kind="StateInputPin" />
+                    <Pin Id="B0L78FBfzrdMpI4dvYAOUQ" Name="Output" Kind="OutputPin" />
                     <Pin Id="Vb6pZ7ow1EVOiqC9Up3B6o" Name="MaskMode" Kind="OutputPin" />
                   </Node>
                   <Node Bounds="3137,1122,25,19" Id="P7IQDH2EyBdLdbAYtn3Kod">
@@ -4790,6 +4915,7 @@
                       <Choice Kind="OperationCallFlag" Name="GetHidden" />
                     </p:NodeReference>
                     <Pin Id="Dh3g4so1bKQNsyKABfvGtJ" Name="Input" Kind="StateInputPin" />
+                    <Pin Id="GYxOJ82NgIbLwTdvx7Ps0s" Name="Output" Kind="OutputPin" />
                     <Pin Id="SuAAnZMuaYlMHsYZ83gfDW" Name="Hidden" Kind="OutputPin" />
                   </Node>
                   <Node Bounds="2161,1088,37,19" Id="A0qgkHWfUzbNMdZhUXKdWQ">
@@ -4841,6 +4967,7 @@
                         <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
                         <Choice Kind="ProcessAppFlag" Name="GridChanged" />
                       </p:NodeReference>
+                      <Pin Id="Pj4x4dJwn87MSH8vp7f4ez" Name="Node Context" Kind="InputPin" IsHidden="true" />
                       <Pin Id="Oosnp9j7Ov8NsFmwuvYMma" Name="Grid" Kind="InputPin" />
                       <Pin Id="IQleQPHpCQcPIXLDubFJFS" Name="Result" Kind="OutputPin" />
                     </Node>
@@ -4914,6 +5041,7 @@
                   <Choice Kind="OperationCallFlag" Name="GetMaskGridId" />
                 </p:NodeReference>
                 <Pin Id="LBnpMMpjEDLLhyKHWyUieK" Name="Input" Kind="StateInputPin" />
+                <Pin Id="KgOJEx5byF5OyRfVShNuO7" Name="Output" Kind="OutputPin" />
                 <Pin Id="AaQKpNftlCNL9DzrIuQue0" Name="MaskGridId" Kind="OutputPin" />
               </Node>
               <Link Id="QH6oehH8rr6LMswPOd9ycA" Ids="MRv6vqPPKhvP1uwRlAhGSs,LBnpMMpjEDLLhyKHWyUieK" />
@@ -4991,6 +5119,7 @@
                       <Choice Kind="OperationCallFlag" Name="GetDisabled" />
                     </p:NodeReference>
                     <Pin Id="LTbauEmiE9nL6PiepofAGx" Name="Input" Kind="StateInputPin" />
+                    <Pin Id="FVtZoObR5nRQN3dRVzCG8v" Name="Output" Kind="OutputPin" />
                     <Pin Id="KPBumhhtCVgOf2QGDGPqJ6" Name="Disabled" Kind="OutputPin" />
                   </Node>
                   <Node Bounds="2326,1088,37,19" Id="D21BUYjK12EMUigfd1hjUf">
@@ -5048,6 +5177,7 @@
                       <Choice Kind="OperationCallFlag" Name="GetGridId" />
                     </p:NodeReference>
                     <Pin Id="LGOr6jKLm47NWIOztVTlIu" Name="Input" Kind="StateInputPin" />
+                    <Pin Id="Qm8tw8K0mXZQXR1F27gVOH" Name="Output" Kind="OutputPin" />
                     <Pin Id="GEhYiphLunAMlEFOXIsriG" Name="GridId" Kind="OutputPin" />
                   </Node>
                 </Patch>
@@ -5092,6 +5222,7 @@
                           <Choice Kind="OperationCallFlag" Name="GetGridId" />
                         </p:NodeReference>
                         <Pin Id="VrUkJvrkOM4P0l39837kcT" Name="Input" Kind="StateInputPin" />
+                        <Pin Id="OTDJSz4fEAMQBMa3qGecNk" Name="Output" Kind="OutputPin" />
                         <Pin Id="ID0tb50HQHvOL21BmeAIxF" Name="GridId" Kind="OutputPin" />
                       </Node>
                       <Node Bounds="635,623,25,19" Id="Ce6PSeKpsEFNzcJSx8kYfM">
@@ -5173,6 +5304,7 @@
                       <Choice Kind="OperationCallFlag" Name="GetPosOnGrid" />
                     </p:NodeReference>
                     <Pin Id="ChzXEPTOvZjOxuOTzZ3jB9" Name="Input" Kind="StateInputPin" />
+                    <Pin Id="DJGPXMF5SwQQBmGs8TWDju" Name="Output" Kind="OutputPin" />
                     <Pin Id="D8iGXLNqWdOP1PtOl00lpC" Name="PosOnGrid" Kind="OutputPin" />
                   </Node>
                   <Node Bounds="988,437,34,19" Id="Aty2reUbezSLVNmPPqAVsd">
@@ -5249,6 +5381,7 @@
                           <Choice Kind="OperationCallFlag" Name="GetPosOnGrid" />
                         </p:NodeReference>
                         <Pin Id="VhsZ3fKjsG6L0YZbCwajy5" Name="Input" Kind="StateInputPin" />
+                        <Pin Id="F4cKTvfllQtNyfbztieoux" Name="Output" Kind="OutputPin" />
                         <Pin Id="LIZS1uLKTEqNhddTYNUW6u" Name="PosOnGrid" Kind="OutputPin" />
                       </Node>
                       <Node Bounds="1014,681,34,19" Id="Ty2dqBOM41tLmpe1gxq9Ik">
@@ -5353,6 +5486,7 @@
                       <Choice Kind="OperationCallFlag" Name="GetPosition" />
                     </p:NodeReference>
                     <Pin Id="UdGncS4bi5IM2CKAU4lweB" Name="Input" Kind="StateInputPin" />
+                    <Pin Id="SpxTylcBhGxN3rpuZp0KhT" Name="Output" Kind="OutputPin" />
                     <Pin Id="PH00O0QL5kLPGzOPPA8Qsb" Name="Position" Kind="OutputPin" />
                   </Node>
                   <Node Bounds="316,552,46,19" Id="VfXv3XsevmnPzdvd7mqElo">
@@ -5381,6 +5515,7 @@
                       <Choice Kind="OperationCallFlag" Name="GetPoint" />
                     </p:NodeReference>
                     <Pin Id="IeuUPRp6jieO3Fx21OcG3k" Name="Input" Kind="StateInputPin" />
+                    <Pin Id="Aq4ykVO9BMAL9TQO2g7kHC" Name="Output" Kind="OutputPin" />
                     <Pin Id="AOCfiPqur2zP0dsmRKvw81" Name="Point" Kind="OutputPin" />
                   </Node>
                   <Node Bounds="316,397,58,26" Id="GlH4UxHQeczPdGvioWU6ks">
@@ -5518,6 +5653,7 @@
                           <Choice Kind="OperationCallFlag" Name="GetPosition" />
                         </p:NodeReference>
                         <Pin Id="LAXNioGIewRMZASdnhuSgH" Name="Input" Kind="StateInputPin" />
+                        <Pin Id="AEK2I0komRXMwO6JCmrdjL" Name="Output" Kind="OutputPin" />
                         <Pin Id="Kx4DhntOgSxMCPyyNFMQ3T" Name="Position" Kind="OutputPin" />
                       </Node>
                       <Node Bounds="16,520,64,19" Id="FWb6T6gGvNcOr4yZUYpQXW">
@@ -5559,6 +5695,7 @@
                       <Choice Kind="OperationCallFlag" Name="GetEditablePoints" />
                     </p:NodeReference>
                     <Pin Id="N31dXUy5aocOTf2IRL0eda" Name="Input" Kind="StateInputPin" />
+                    <Pin Id="FvCT7dxySDsQAyZkKdYLtc" Name="Output" Kind="OutputPin" />
                     <Pin Id="AaGzu9NqTllNjxsb15c1yn" Name="Points" Kind="OutputPin" />
                   </Node>
                   <Node Bounds="-19,608,110,26" Id="RlPjidYeOpqLLcLYN8RZ4I">
@@ -5778,6 +5915,7 @@
                       <Choice Kind="OperationCallFlag" Name="GetPosOnGrid" />
                     </p:NodeReference>
                     <Pin Id="UxpXnJ5Hj6yL2CcXrxd88s" Name="Input" Kind="StateInputPin" />
+                    <Pin Id="SoJqgFsBXYKL2MUQNmjmhX" Name="Output" Kind="OutputPin" />
                     <Pin Id="VoJ8mowkdm6QMiusMufqdS" Name="PosOnGrid" Kind="OutputPin" />
                   </Node>
                   <Node Bounds="274,1060,25,19" Id="RmAbZqgj8tLPNmHYTElpNj">
@@ -5951,6 +6089,7 @@
                           <Choice Kind="OperationCallFlag" Name="GetControls" />
                         </p:NodeReference>
                         <Pin Id="LtGDPZGfM39MwP3zc4LUU1" Name="Input" Kind="StateInputPin" />
+                        <Pin Id="MmcfXp5IfWCQPBfaCG92zD" Name="Output" Kind="OutputPin" />
                         <Pin Id="Jn8tpG8vv2rPQKXQHRGHdm" Name="Points" Kind="OutputPin" />
                       </Node>
                       <Node Bounds="633,1245,253,254" Id="CCgQP9LVEEUOsV16HHUlhP">
@@ -6004,6 +6143,7 @@
                                   <Choice Kind="OperationCallFlag" Name="GetPosition" />
                                 </p:NodeReference>
                                 <Pin Id="IB83Z3N1UxMLD5qjscIlud" Name="Input" Kind="StateInputPin" />
+                                <Pin Id="DOvmj7XggEDLe5vahCaVk5" Name="Output" Kind="OutputPin" />
                                 <Pin Id="RnuE8hT8TPnQTmX61eN9wc" Name="Position" Kind="OutputPin" />
                               </Node>
                               <Node Bounds="668,1397,66,26" Id="N5cFJNGgMCiLhXpLbFG5HM">
@@ -6023,6 +6163,7 @@
                                   <Choice Kind="OperationCallFlag" Name="GetPosition" />
                                 </p:NodeReference>
                                 <Pin Id="H1fWpM6Qn5AOsXEyPvvGd0" Name="Input" Kind="StateInputPin" />
+                                <Pin Id="JzI2kwpltZeOxWoPGYG6su" Name="Output" Kind="OutputPin" />
                                 <Pin Id="Klom8SnqSZPNM0nL88pIpc" Name="Position" Kind="OutputPin" />
                               </Node>
                               <Node Bounds="729,1368,45,19" Id="Hmkudyg4hCHQa9P5PZiIHa">
@@ -6189,6 +6330,7 @@
                   <Choice Kind="OperationCallFlag" Name="GetPosOnGrid" />
                 </p:NodeReference>
                 <Pin Id="UFMXkn7mnz1LvOcHEvoQB5" Name="Input" Kind="StateInputPin" />
+                <Pin Id="QKEFK0kctsOLXB3rtrZAMt" Name="Output" Kind="OutputPin" />
                 <Pin Id="Icf5f2Q2Gq4N4JajYkyqrQ" Name="PosOnGrid" Kind="OutputPin" />
               </Node>
               <Link Id="Nkw2meX2VewP2NzSrrmare" Ids="F9nmsBRTvNHQKMBxUfQz43,SRb2kgLyoOgMD3QJrw04kh" />
@@ -6290,6 +6432,7 @@
                       <Choice Kind="OperationCallFlag" Name="GetPoints" />
                     </p:NodeReference>
                     <Pin Id="BMf5ASy6J8SLY2LoudprIE" Name="Input" Kind="StateInputPin" />
+                    <Pin Id="N04yBODLoeTO0xnHtxbAHJ" Name="Output" Kind="OutputPin" />
                     <Pin Id="FEGHho54Sm4Ns1hYlJGjvK" Name="Points" Kind="OutputPin" />
                   </Node>
                   <Node Bounds="957,368,158,95" Id="LazQowyXa7tMkNsqFkAkAe">
@@ -6314,6 +6457,7 @@
                           <Choice Kind="OperationCallFlag" Name="IsPointOrControlsSelected" />
                         </p:NodeReference>
                         <Pin Id="NLjifRDuRsCLD4XQKBidIR" Name="Input" Kind="StateInputPin" />
+                        <Pin Id="TpZTNE7I8XcLKEp5STELNU" Name="State Output" Kind="OutputPin" />
                         <Pin Id="DHosEu8FyjoMnePprxnm1V" Name="Output" Kind="OutputPin" />
                       </Node>
                     </Patch>
@@ -6346,6 +6490,7 @@
                   <Choice Kind="OperationCallFlag" Name="GetGridId" />
                 </p:NodeReference>
                 <Pin Id="KCEFaTp2POjNqQZ5TI8iuE" Name="Input" Kind="StateInputPin" />
+                <Pin Id="VYZdGfVEObvLT8cUzTkku1" Name="Output" Kind="OutputPin" />
                 <Pin Id="Bhj6vzzRWL3MWVVjSrB949" Name="GridId" Kind="OutputPin" />
               </Node>
               <Node Bounds="974,547,44,26" Id="IE1nDJgzLW9MySYcxS2IW2">
@@ -6371,6 +6516,8 @@
                   <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
                   <Choice Kind="ProcessAppFlag" Name="Changed" />
                 </p:NodeReference>
+                <Pin Id="K8e0D4o6vQ1LfEOGYtA1Ly" Name="Node Context" Kind="InputPin" IsHidden="true" />
+                <Pin Id="BD7YWiFBsdDOsYuYIfuZ60" Name="Changed On Create" Kind="InputPin" IsHidden="true" />
                 <Pin Id="OU0ywsOBZWxPntcyivhzzQ" Name="Value" Kind="InputPin" />
                 <Pin Id="LV68PuKghAeOZWHrZkgSTF" Name="Result" Kind="OutputPin" />
                 <Pin Id="DkEiM81OeF6M7RdbDFWllN" Name="Unchanged" Kind="OutputPin" />
@@ -6491,6 +6638,7 @@
                   <Choice Kind="OperationCallFlag" Name="GetSlice" />
                 </p:NodeReference>
                 <Pin Id="Tj1feGgNooZN9Ulf4J2MYZ" Name="Input" Kind="StateInputPin" />
+                <Pin Id="IXXybGGNDyoPIqxIFH4Msa" Name="Output" Kind="OutputPin" />
                 <Pin Id="DnfGNDjZtV4LlILtvURmmW" Name="SliceAdd" Kind="OutputPin" />
                 <Pin Id="A1NgWQarXt3MBvoXvtHqQ3" Name="SliceRemove" Kind="OutputPin" />
                 <Pin Id="GYCKugTiq5xLcsm0hXD0mI" Name="SliceDuplicate" Kind="OutputPin" />
@@ -6507,6 +6655,7 @@
                   <Choice Kind="OperationCallFlag" Name="GetScreen" />
                 </p:NodeReference>
                 <Pin Id="LEZQFXDCIK9Nl8pSSXv70O" Name="Input" Kind="StateInputPin" />
+                <Pin Id="FP1yAMkZs8VOTxLmHS6R2t" Name="Output" Kind="OutputPin" />
                 <Pin Id="BgIXQjxuogkNT3Lwk7Czvt" Name="ScreenAdd" Kind="OutputPin" />
                 <Pin Id="Jplyw2hk4FENzYVUaITW70" Name="ScreenRemove" Kind="OutputPin" />
                 <Pin Id="OwBt5UpaLQ4Pk3f6MPO1v0" Name="ScreenClear" Kind="OutputPin" />
@@ -6764,6 +6913,7 @@
                           <Choice Kind="OperationCallFlag" Name="GetId" />
                         </p:NodeReference>
                         <Pin Id="IYCNunBz7TjOs9jfXJv6CI" Name="Input" Kind="StateInputPin" />
+                        <Pin Id="Co81KQWucUQQcsGBUldVaA" Name="Output" Kind="OutputPin" />
                         <Pin Id="NHOUYnN9oCdNL1Ny9aN05B" Name="Id" Kind="OutputPin" />
                       </Node>
                     </Patch>
@@ -6806,6 +6956,7 @@
                           <Choice Kind="OperationCallFlag" Name="GetPoints" />
                         </p:NodeReference>
                         <Pin Id="MCcYgQFd2lYQACoBJMDLqH" Name="Input" Kind="StateInputPin" />
+                        <Pin Id="TodhFMTRSQ5Nyd3FEzCWdV" Name="Output" Kind="OutputPin" />
                         <Pin Id="RBsuRAtp3baO1rhQSaDTkJ" Name="Points" Kind="OutputPin" />
                       </Node>
                       <Node Bounds="1321,627,245,83" Id="LRCbC9snCR4QWAKjNY9Y1T">
@@ -6826,6 +6977,7 @@
                               <Choice Kind="OperationCallFlag" Name="GetId" />
                             </p:NodeReference>
                             <Pin Id="TYMzPiYTYtZNfaRwnxkfnc" Name="Input" Kind="StateInputPin" />
+                            <Pin Id="IIZXbIckUx9MGSUGjuQ31J" Name="Output" Kind="OutputPin" />
                             <Pin Id="PpWo6z87VxQLOhoH3zqw6r" Name="Id" Kind="OutputPin" />
                           </Node>
                           <Node Bounds="1447,659,107,26" Id="BSsCeUgPLKhQAHIHABbf0i">
@@ -6835,6 +6987,7 @@
                               <Choice Kind="OperationCallFlag" Name="GetEditablePointsAll" />
                             </p:NodeReference>
                             <Pin Id="OVbRG6KdPGkPLBorPSdNJT" Name="Input" Kind="StateInputPin" />
+                            <Pin Id="PwJk6uIcyEiPQ533RvlEdS" Name="Output" Kind="OutputPin" />
                             <Pin Id="CTfHz6Gywj8L6MDzQSqhJ4" Name="Points" Kind="OutputPin" />
                           </Node>
                         </Patch>
@@ -6860,6 +7013,7 @@
                               <Choice Kind="OperationCallFlag" Name="GetId" />
                             </p:NodeReference>
                             <Pin Id="EQ0SeuJSAnaNKtmLCffklr" Name="Input" Kind="StateInputPin" />
+                            <Pin Id="QjTD7vs656HMj3HzLCcGlj" Name="Output" Kind="OutputPin" />
                             <Pin Id="ST1E41mn41RLrhoHRkO1U5" Name="Id" Kind="OutputPin" />
                           </Node>
                         </Patch>
@@ -7121,6 +7275,7 @@
                   <Choice Kind="OperationCallFlag" Name="GetEditablePoints (Split)" />
                 </p:NodeReference>
                 <Pin Id="N5PeIlc9AlVMNK6uR89LXY" Name="Input" Kind="StateInputPin" />
+                <Pin Id="ObxMcJbzfkeO4PcnOFgES9" Name="Output" Kind="OutputPin" />
                 <Pin Id="S4xOpELzGidNa8PY5xbr03" Name="Point" Kind="OutputPin" />
                 <Pin Id="EPTfFzrR7LxMMSLsDaUMKP" Name="Control1" Kind="OutputPin" />
                 <Pin Id="T9fyxrrz0a5Oywa5K9PS0w" Name="Control2" Kind="OutputPin" />
@@ -7132,6 +7287,7 @@
                   <Choice Kind="OperationCallFlag" Name="GetEditablePoints (Split)" />
                 </p:NodeReference>
                 <Pin Id="C0BcXue5UQFNYnzO4YDJ5p" Name="Input" Kind="StateInputPin" />
+                <Pin Id="VHQ8kmUSYc2OYRefcLAiLZ" Name="Output" Kind="OutputPin" />
                 <Pin Id="FYSY4nb6QUzPmksPzdNUuT" Name="Point" Kind="OutputPin" />
                 <Pin Id="FGUUFNiLGPsOYHrY9XS2ls" Name="Control1" Kind="OutputPin" />
                 <Pin Id="CfoeXRomKdwOOEh2pAiVQe" Name="Control2" Kind="OutputPin" />
@@ -7151,6 +7307,7 @@
                   <Choice Kind="OperationCallFlag" Name="GetEditablePoints (Split)" />
                 </p:NodeReference>
                 <Pin Id="RXvIgiN1JueQRhn68TlpSB" Name="Input" Kind="StateInputPin" />
+                <Pin Id="R6VY8xjvIKkMKiTQaC2LTE" Name="Output" Kind="OutputPin" />
                 <Pin Id="S3eeM63XslmL7C2TO6ucio" Name="Point" Kind="OutputPin" />
                 <Pin Id="DIbXgDtWfCTNEZFCJycj2j" Name="Control1" Kind="OutputPin" />
                 <Pin Id="RBFA9hVUs01PoDrlvGTxkC" Name="Control2" Kind="OutputPin" />
@@ -7162,6 +7319,7 @@
                   <Choice Kind="OperationCallFlag" Name="GetEditablePoints (Split)" />
                 </p:NodeReference>
                 <Pin Id="GwikRbn6Jn5QHtvq3Z3Eyb" Name="Input" Kind="StateInputPin" />
+                <Pin Id="FQtbIhJZIxhLOJSeJxDX9g" Name="Output" Kind="OutputPin" />
                 <Pin Id="AuyMnYb0rkROBHJMTYeRjK" Name="Point" Kind="OutputPin" />
                 <Pin Id="Lcl2JZU22whOrQuK70AkaL" Name="Control1" Kind="OutputPin" />
                 <Pin Id="CxcRTqDPOaIOfb3vjNtAj4" Name="Control2" Kind="OutputPin" />
@@ -7234,6 +7392,7 @@
                   <Choice Kind="OperationCallFlag" Name="IsPointOrControlsSelected" />
                 </p:NodeReference>
                 <Pin Id="ARNCrAn1P3sManEH5X9dvb" Name="Input" Kind="StateInputPin" />
+                <Pin Id="FuaA4q8N7ynQK8jyW5LLhY" Name="Output" Kind="OutputPin" />
                 <Pin Id="M3MA8BquisEOXguNBNYfCP" Name="Result" Kind="OutputPin" />
               </Node>
               <Node Bounds="1167,1396,134,26" Id="SV6xhPJVx0jLLpu4S24f4J">
@@ -7243,6 +7402,7 @@
                   <Choice Kind="OperationCallFlag" Name="IsPointOrControlsSelected" />
                 </p:NodeReference>
                 <Pin Id="IOXuFJvsh17Npe9w4iazUz" Name="Input" Kind="StateInputPin" />
+                <Pin Id="Ez7geLx2CDKLlRTn3imnNv" Name="Output" Kind="OutputPin" />
                 <Pin Id="NE3qh8u0CeBLMEZPC7myqy" Name="Result" Kind="OutputPin" />
               </Node>
               <Node Bounds="1121,1442,30,19" Id="VdaFE4uxZttMAQSsjDWk0J">
@@ -7270,6 +7430,7 @@
                   <Choice Kind="OperationCallFlag" Name="GetEditablePoints (Split)" />
                 </p:NodeReference>
                 <Pin Id="LNmlmUAK8AoO4tkJwiC8V1" Name="Input" Kind="StateInputPin" />
+                <Pin Id="K7l3pGpECTvMZ49yrfk6pK" Name="Output" Kind="OutputPin" />
                 <Pin Id="QTaXN0F54rvOVnxvrw6qWv" Name="Point" Kind="OutputPin" />
                 <Pin Id="BtrEBg1TkoOQE4IkAZzsCg" Name="Control1" Kind="OutputPin" />
                 <Pin Id="GaOgd1wko2PMziQEyDS7BO" Name="Control2" Kind="OutputPin" />
@@ -7281,6 +7442,7 @@
                   <Choice Kind="OperationCallFlag" Name="GetEditablePoints (Split)" />
                 </p:NodeReference>
                 <Pin Id="CRvEXj3AXt6NlSZrU6TMTH" Name="Input" Kind="StateInputPin" />
+                <Pin Id="VGzSzB2PEfoQDGBbyRjzGJ" Name="Output" Kind="OutputPin" />
                 <Pin Id="K6O5E0VpioHOtoTSdQqPmx" Name="Point" Kind="OutputPin" />
                 <Pin Id="BUeKq6LjusSQCQgRpe1LeR" Name="Control1" Kind="OutputPin" />
                 <Pin Id="BamsErGNdZtON4T3X392oT" Name="Control2" Kind="OutputPin" />
@@ -7323,6 +7485,7 @@
                   <Choice Kind="OperationCallFlag" Name="GetPointPos" />
                 </p:NodeReference>
                 <Pin Id="RISlxMIbq8uLPg5r7NQHWz" Name="Input" Kind="StateInputPin" />
+                <Pin Id="FXhlAvYxsINLgqtVEHKmn4" Name="Output" Kind="OutputPin" />
                 <Pin Id="SUsk5wy7DHIMhtLzqcKqGW" Name="Position" Kind="OutputPin" />
               </Node>
               <Node Bounds="1648,1490,83,26" Id="Ev8Z6wjups5LMrHQvuF0Dm">
@@ -7341,6 +7504,7 @@
                   <Choice Kind="OperationCallFlag" Name="GetPointPos" />
                 </p:NodeReference>
                 <Pin Id="Oy1ULCddiu2ODqHzSldwib" Name="Input" Kind="StateInputPin" />
+                <Pin Id="CssskGocZMcPWP3hEiyXUv" Name="Output" Kind="OutputPin" />
                 <Pin Id="RnxBIwkZ23fP8sW17gmWn4" Name="Position" Kind="OutputPin" />
               </Node>
               <Node Bounds="1980,562,83,26" Id="Cwe4xL1nuz6PTBHPhIzBtl">
@@ -7361,6 +7525,7 @@
                   <Choice Kind="OperationCallFlag" Name="GetEditablePointsPos (Split)" />
                 </p:NodeReference>
                 <Pin Id="CNVjKnqhEvhLFnGNZ0aYgh" Name="Input" Kind="StateInputPin" />
+                <Pin Id="D2HKjajEBbsLcOBtGqtP0d" Name="Output" Kind="OutputPin" />
                 <Pin Id="Dqj7ZGWcI8bL9Wv9CX4TI3" Name="Point" Kind="OutputPin" />
                 <Pin Id="PXQScASJwLJOINGinghFp4" Name="Control1" Kind="OutputPin" />
                 <Pin Id="H5CWH1H5MBLO0yRBXFBv1i" Name="Control2" Kind="OutputPin" />
@@ -7372,6 +7537,7 @@
                   <Choice Kind="OperationCallFlag" Name="GetEditablePointsPos (Split)" />
                 </p:NodeReference>
                 <Pin Id="QulUiIiZhtJPrSDUghdUjN" Name="Input" Kind="StateInputPin" />
+                <Pin Id="GyytehOt7pRNNDQPs5FTkD" Name="Output" Kind="OutputPin" />
                 <Pin Id="NpcCPCKvwYVQMAQ8WbeMYu" Name="Point" Kind="OutputPin" />
                 <Pin Id="LeTEq7ywM28Mf2fiuL225T" Name="Control1" Kind="OutputPin" />
                 <Pin Id="LomuXATQFweOjInctm3moc" Name="Control2" Kind="OutputPin" />
@@ -7420,6 +7586,7 @@
                   <Choice Kind="OperationCallFlag" Name="GetEditablePointsPos (Split)" />
                 </p:NodeReference>
                 <Pin Id="FikFxSDzuvcO5aUH3dcjVV" Name="Input" Kind="StateInputPin" />
+                <Pin Id="U9hRWxQxCHwMjQ1MiYjNoO" Name="Output" Kind="OutputPin" />
                 <Pin Id="TKmD0wdTArhM7GXcGIxR1y" Name="Point" Kind="OutputPin" />
                 <Pin Id="Sddl2wOZJUuP50dXrKyHfl" Name="Control1" Kind="OutputPin" />
                 <Pin Id="G4OtHobWenYOf7amhPiHnU" Name="Control2" Kind="OutputPin" />
@@ -7431,6 +7598,7 @@
                   <Choice Kind="OperationCallFlag" Name="GetEditablePointsPos (Split)" />
                 </p:NodeReference>
                 <Pin Id="Ca8cZkOGheQMdQcTLqiNpH" Name="Input" Kind="StateInputPin" />
+                <Pin Id="HSCILi9vnw4OXP2DOVkB0w" Name="Output" Kind="OutputPin" />
                 <Pin Id="UVIiOaOdke5NQvtLgY9vqz" Name="Point" Kind="OutputPin" />
                 <Pin Id="L9oQt2OP2vmQOKIeUvcPCw" Name="Control1" Kind="OutputPin" />
                 <Pin Id="Lr6L3PUsNofMgfCX345mFl" Name="Control2" Kind="OutputPin" />
@@ -7472,6 +7640,7 @@
                   <Choice Kind="OperationCallFlag" Name="GetEditablePoints (Split)" />
                 </p:NodeReference>
                 <Pin Id="CvcvvbYUbQ1NuoZN8w4hHo" Name="Input" Kind="StateInputPin" />
+                <Pin Id="TnBmzucdocPNQzqnwia9tK" Name="Output" Kind="OutputPin" />
                 <Pin Id="KUEPm5Fg3RYLvmFjNB3YsJ" Name="Point" Kind="OutputPin" />
                 <Pin Id="B2zUJrWu88HNC9ihucevgt" Name="Control1" Kind="OutputPin" />
                 <Pin Id="RYve05oxs41QLgo68s8oxn" Name="Control2" Kind="OutputPin" />
@@ -7483,6 +7652,7 @@
                   <Choice Kind="OperationCallFlag" Name="GetEditablePoints (Split)" />
                 </p:NodeReference>
                 <Pin Id="IEmLWY8nBLUQOsFiIJK2WT" Name="Input" Kind="StateInputPin" />
+                <Pin Id="NCG2fLG77SUMFeDj2E3qTs" Name="Output" Kind="OutputPin" />
                 <Pin Id="PqmI0HoBRWfOgXujZ5DZeb" Name="Point" Kind="OutputPin" />
                 <Pin Id="PDFI4X2sL1eNAoXEuBzAm5" Name="Control1" Kind="OutputPin" />
                 <Pin Id="RNKq0IUe56LMj4FrfgilqQ" Name="Control2" Kind="OutputPin" />
@@ -7536,6 +7706,7 @@
                   <Choice Kind="OperationCallFlag" Name="GetPointPos" />
                 </p:NodeReference>
                 <Pin Id="N3KeFbeGxIJO12fw8kd1GR" Name="Input" Kind="StateInputPin" />
+                <Pin Id="QBWsBJK1f8pQdz3Hpf05N0" Name="Output" Kind="OutputPin" />
                 <Pin Id="LMbYCyBPnHlNQ8JKrUJKsa" Name="Position" Kind="OutputPin" />
               </Node>
               <ControlPoint Id="IfzrWhwJdueNAmHzYmKpfl" Bounds="1016,1625" />
@@ -7676,6 +7847,7 @@
                   <Choice Kind="OperationCallFlag" Name="GetPoint" />
                 </p:NodeReference>
                 <Pin Id="JkIxsXv3mgaNUnEX0BHC4q" Name="Input" Kind="StateInputPin" />
+                <Pin Id="Uzbjdi43mrANeLIHhXmkWO" Name="Output" Kind="OutputPin" />
                 <Pin Id="DwI0nV3t3Z6PKtxDiFQcUv" Name="Point" Kind="OutputPin" />
               </Node>
               <ControlPoint Id="LdePHfivUgtOTkFlCOECHO" Bounds="1203,1625" />
@@ -8303,6 +8475,7 @@
                       <Choice Kind="OperationCallFlag" Name="GetGridPointId" />
                     </p:NodeReference>
                     <Pin Id="Sd1gQ3Fat9tPYe0wOjNtBW" Name="Input" Kind="StateInputPin" />
+                    <Pin Id="A8sM2ea3L7jMajk2b2Pw1R" Name="Output" Kind="OutputPin" />
                     <Pin Id="CumnVo0OCPTOAC4yCssSvs" Name="GridPointId" Kind="OutputPin" />
                   </Node>
                   <Node Bounds="1052,572,25,19" Id="RgQTsDFu7BbMG85lxkllJn">
@@ -8382,6 +8555,7 @@
                       <Choice Kind="OperationCallFlag" Name="IsHorizontal" />
                     </p:NodeReference>
                     <Pin Id="Eu2JSxfNcKBLGmTwjuToS6" Name="Input" Kind="StateInputPin" />
+                    <Pin Id="DNJLhYQwfvxOACplD48auR" Name="Output" Kind="OutputPin" />
                     <Pin Id="I4YEQmvtQd5PljBxmF6Rke" Name="Result" Kind="OutputPin" />
                   </Node>
                 </Patch>
@@ -8432,6 +8606,7 @@
                       <Choice Kind="OperationCallFlag" Name="IsVertical" />
                     </p:NodeReference>
                     <Pin Id="SbA47J2NOGHPZqz7KdjnTc" Name="Input" Kind="StateInputPin" />
+                    <Pin Id="OTewtwHogqtLREnMnrKHpe" Name="Output" Kind="OutputPin" />
                     <Pin Id="JzAFAbsKkRKOEa9MXeuz2h" Name="Result" Kind="OutputPin" />
                   </Node>
                 </Patch>
@@ -8520,7 +8695,7 @@
     </Slot>
   </Patch>
   <DocumentDependency Id="QRLcoouEtPuQNokZkSDMRc" Location="./VL.GridEditor.Framework.vl" />
-  <NugetDependency Id="ADKZ6Y2osCANda0Ro2mdBi" Location="VL.Skia" Version="2023.5.2" />
+  <NugetDependency Id="ADKZ6Y2osCANda0Ro2mdBi" Location="VL.Skia" Version="2024.6.6-0010-gbaee5e8cb4" />
   <DocumentDependency Id="V0kOEF7lNlvQRNjk1pjCm4" Location="./VL.GuiState.vl" />
   <DocumentDependency Id="Cf98VmmVZr6M5CWnutNTbX" Location="./VL.GridEditor.vl" />
 </Document>
