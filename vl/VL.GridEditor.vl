@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<Document xmlns:p="property" xmlns:r="reflection" Id="CbQ49tB1IyGQTS8CTz165D" LanguageVersion="2024.6.6-0010-gbaee5e8cb4" Version="0.128">
-  <NugetDependency Id="NJqwcoNIQvcPvHyIQGVcT0" Location="VL.CoreLib" Version="2024.6.6-0010-gbaee5e8cb4" />
+<Document xmlns:p="property" xmlns:r="reflection" Id="CbQ49tB1IyGQTS8CTz165D" LanguageVersion="2024.6.5-0027-gc8226ab3ea" Version="0.128">
+  <NugetDependency Id="NJqwcoNIQvcPvHyIQGVcT0" Location="VL.CoreLib" Version="2024.6.5-0027-gc8226ab3ea" />
   <Patch Id="KeXYx29Osj7PdlX9X4EiFk">
     <Canvas Id="TmCnPAlnth2PWfE7U4yD91" DefaultCategory="Mapper.Grid" CanvasType="FullCategory">
       <Canvas Id="EImvoGa74UGO03eU4aEwPp" Name="Advanced" Position="663,411">
@@ -1873,6 +1873,7 @@
                       <CategoryReference Kind="RecordType" Name="EditablePoint" />
                       <Choice Kind="OperationCallFlag" Name="Create" />
                     </p:NodeReference>
+                    <Pin Id="SyeBYmphUPIQQiKm5XcT3e" Name="Node Context" Kind="InputPin" IsHidden="true" />
                     <Pin Id="Jderd7Ch9L4QAmTYDNij7K" Name="Position" Kind="InputPin" />
                     <Pin Id="CWAYotwxoLnQK5VqkfSaRq" Name="Id" Kind="InputPin" />
                     <Pin Id="JObWc2rN0gqP8Vi6x4SNfR" Name="Output" Kind="StateOutputPin" />
@@ -1883,6 +1884,7 @@
                       <CategoryReference Kind="RecordType" Name="EditablePoint" />
                       <Choice Kind="OperationCallFlag" Name="Create" />
                     </p:NodeReference>
+                    <Pin Id="G9fABUNUGmJOE2ev5Ck44F" Name="Node Context" Kind="InputPin" IsHidden="true" />
                     <Pin Id="Qra1XrZfnh5MYUCKwYswTP" Name="Position" Kind="InputPin" />
                     <Pin Id="VGFEfBiqwQ8NtM9w0hZRs0" Name="Id" Kind="InputPin" />
                     <Pin Id="UaA7H3O0MGIPkGrit9jdXS" Name="Output" Kind="StateOutputPin" />
@@ -1893,6 +1895,7 @@
                       <CategoryReference Kind="RecordType" Name="EditablePoint" />
                       <Choice Kind="OperationCallFlag" Name="Create" />
                     </p:NodeReference>
+                    <Pin Id="Eigs96HOosCOW3IKh7Ro1h" Name="Node Context" Kind="InputPin" IsHidden="true" />
                     <Pin Id="IMwirPAmCXFL92HyFkLzgm" Name="Position" Kind="InputPin" />
                     <Pin Id="CsJGJSxqQylQaQmWzB0TJD" Name="Id" Kind="InputPin" />
                     <Pin Id="TXqnqon8sACOZIfrlnlcBL" Name="Output" Kind="StateOutputPin" />
@@ -8695,7 +8698,6 @@
     </Slot>
   </Patch>
   <DocumentDependency Id="QRLcoouEtPuQNokZkSDMRc" Location="./VL.GridEditor.Framework.vl" />
-  <NugetDependency Id="ADKZ6Y2osCANda0Ro2mdBi" Location="VL.Skia" Version="2024.6.6-0010-gbaee5e8cb4" />
+  <NugetDependency Id="ADKZ6Y2osCANda0Ro2mdBi" Location="VL.Skia" Version="2024.6.5-0027-gc8226ab3ea" />
   <DocumentDependency Id="V0kOEF7lNlvQRNjk1pjCm4" Location="./VL.GuiState.vl" />
-  <DocumentDependency Id="Cf98VmmVZr6M5CWnutNTbX" Location="./VL.GridEditor.vl" />
 </Document>

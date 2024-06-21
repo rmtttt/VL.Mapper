@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<Document xmlns:p="property" xmlns:r="reflection" Id="GDJBjx2xAZ9OK0ZxyC9GUh" LanguageVersion="2024.6.6-0010-gbaee5e8cb4" Version="0.128">
-  <NugetDependency Id="QgAKPzh5uDtQLWAtVYa3kJ" Location="VL.CoreLib" Version="2024.6.6-0010-gbaee5e8cb4" />
+<Document xmlns:p="property" xmlns:r="reflection" Id="GDJBjx2xAZ9OK0ZxyC9GUh" LanguageVersion="2024.6.5-0027-gc8226ab3ea" Version="0.128">
+  <NugetDependency Id="QgAKPzh5uDtQLWAtVYa3kJ" Location="VL.CoreLib" Version="2024.6.5-0027-gc8226ab3ea" />
   <Patch Id="JZfmlMsum0OONBx3d1mKk1">
     <Canvas Id="Oo1nRRUjTh7OjSXIr0nLzW" DefaultCategory="Mapper" CanvasType="FullCategory">
       <Canvas Id="IZOSfnzCcw0OHYmm76LsoB" Name="Internal" Position="908,655">
@@ -3932,7 +3932,6 @@
                           <Pin Id="MeScgRrRd03NSPFFoEA9wi" Name="Context" Kind="OutputPin" />
                           <Pin Id="JzXsmyvqlocMxKwDMdDKYB" Name="Bang" Kind="OutputPin" />
                           <Pin Id="TzKvml5At8YL1NQOv3ebdi" Name="Value" Kind="OutputPin" />
-                          <Pin Id="MPW3xjxmxmXM3b8N29pFPy" Name="Content Is Visible" Kind="OutputPin" />
                         </Node>
                         <Node Bounds="1047,663,97,19" Id="RmkLDDp8Fn1Ol2UxIfRWqv">
                           <p:NodeReference LastCategoryFullName="ImGui.Commands" LastDependency="VL.ImGui.vl">
@@ -7896,16 +7895,16 @@
     </Node>
   </Patch>
   <DocumentDependency Id="I1xm8ApnLDFN3KksIjBeG1" Location="./vl/VL.GridEditor.vl" />
-  <NugetDependency Id="E8yP2R6dNa2P3S5vjJZA59" Location="VL.ImGui" Version="2024.6.6-0010-gbaee5e8cb4" />
-  <NugetDependency Id="PrOYiE2iu6tOkGtPJl62Xx" Location="VL.ImGui.Skia" Version="2024.6.6-0010-gbaee5e8cb4" />
+  <NugetDependency Id="E8yP2R6dNa2P3S5vjJZA59" Location="VL.ImGui" Version="2024.6.5-0027-gc8226ab3ea" />
+  <NugetDependency Id="PrOYiE2iu6tOkGtPJl62Xx" Location="VL.ImGui.Skia" Version="2024.6.5-0027-gc8226ab3ea" />
   <DocumentDependency Id="E3TV6yz3WbuPKh43BjqXk3" Location="./vl/VL.GridEditor.Framework.vl" />
-  <NugetDependency Id="H7QiKkeejPlM57S8HQo3VG" Location="VL.Skia" Version="2024.6.6-0010-gbaee5e8cb4" />
+  <NugetDependency Id="H7QiKkeejPlM57S8HQo3VG" Location="VL.Skia" Version="2024.6.5-0027-gc8226ab3ea" />
   <DocumentDependency Id="FAfuB00fUtFL3Z5WuODrnT" Location="./vl/VL.GuiState.vl" />
-  <NugetDependency Id="JaiBynDnG6KLImUdA4I3r6" Location="VL.CoreLib.Windows" Version="2024.6.6-0010-gbaee5e8cb4" />
-  <NugetDependency Id="Fa3nhfIIyq6LjnWzbC4Vul" Location="VL.Stride" Version="2024.6.6-0010-gbaee5e8cb4" />
+  <NugetDependency Id="JaiBynDnG6KLImUdA4I3r6" Location="VL.CoreLib.Windows" Version="2024.6.5-0027-gc8226ab3ea" />
+  <NugetDependency Id="Fa3nhfIIyq6LjnWzbC4Vul" Location="VL.Stride" Version="2024.6.5-0027-gc8226ab3ea" />
   <DocumentDependency Id="PUfXumWowEzOVH69ZejmeF" Location="./vl/VL.GridEditor.Framework.BezierView.vl" />
   <DocumentDependency Id="UHF0P052Al3PK8IJNkQXnh" Location="./vl/VL.Mapper.Warp.vl" IsForward="true" />
   <DocumentDependency Id="MPWF8rQdKULLhCnYxBjctc" Location="./vl/VL.Mapper.Screen.vl" />
-  <NugetDependency Id="M5tyG6vMPFHOemLAGlhSX7" Location="VL.Serialization.FSPickler" Version="2024.6.6-0010-gbaee5e8cb4" />
-  <NugetDependency Id="CWuPQnUVFYzLRu2qfM3KhX" Location="VL.Stride.TextureFX" Version="2024.6.6-0010-gbaee5e8cb4" />
+  <NugetDependency Id="M5tyG6vMPFHOemLAGlhSX7" Location="VL.Serialization.FSPickler" Version="2024.6.5-0027-gc8226ab3ea" />
+  <NugetDependency Id="CWuPQnUVFYzLRu2qfM3KhX" Location="VL.Stride.TextureFX" Version="2024.6.5-0027-gc8226ab3ea" />
 </Document>

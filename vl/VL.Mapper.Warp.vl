@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<Document xmlns:p="property" xmlns:r="reflection" Id="B1lWyFBoZ2bMtohRvpNzSy" LanguageVersion="2024.6.6-0010-gbaee5e8cb4" Version="0.128">
-  <NugetDependency Id="IMZrCV5YDlYNyy4hF1jf0i" Location="VL.CoreLib" Version="2024.6.6-0010-gbaee5e8cb4" />
+<Document xmlns:p="property" xmlns:r="reflection" Id="B1lWyFBoZ2bMtohRvpNzSy" LanguageVersion="2024.6.5-0027-gc8226ab3ea" Version="0.128">
+  <NugetDependency Id="IMZrCV5YDlYNyy4hF1jf0i" Location="VL.CoreLib" Version="2024.6.5-0027-gc8226ab3ea" />
   <Patch Id="I9DJCN2WFyHNe6jCStjRlP">
     <Canvas Id="OFOifh0seqoMTmL2or8j6E" DefaultCategory="Mapper.Warp.Advanced" CanvasType="FullCategory">
       <!--
@@ -5339,11 +5339,10 @@
       </Patch>
     </Node>
   </Patch>
-  <NugetDependency Id="M6NvAj6qRvsQAoDvBW3D8o" Location="VL.Stride" Version="2024.6.6-0010-gbaee5e8cb4" />
+  <NugetDependency Id="M6NvAj6qRvsQAoDvBW3D8o" Location="VL.Stride" Version="2024.6.5-0027-gc8226ab3ea" />
   <DocumentDependency Id="BuMrUf9gpl2QIPLfuGt1L1" Location="./VL.GridEditor.vl" />
   <DocumentDependency Id="Sfn9KK70zCvMqsXirMZHTn" Location="./VL.GuiState.vl" />
   <DocumentDependency Id="K2xYAUp7FIOOcmKwgyNxx1" Location="./VL.Mapper.Screen.vl" />
-  <NugetDependency Id="V2qns942QmrMh18d6s1nsG" Location="VL.Skia" Version="2024.6.6-0010-gbaee5e8cb4" />
-  <DocumentDependency Id="LbVYzjkhTvHOt4Qv6oR6kz" Location="./VL.Mapper.Warp.vl" />
-  <NugetDependency Id="SYNdxB7421NO4Loqme37MR" Location="VL.Stride.TextureFX" Version="2024.6.6-0010-gbaee5e8cb4" />
+  <NugetDependency Id="V2qns942QmrMh18d6s1nsG" Location="VL.Skia" Version="2024.6.5-0027-gc8226ab3ea" />
+  <NugetDependency Id="SYNdxB7421NO4Loqme37MR" Location="VL.Stride.TextureFX" Version="2024.6.5-0027-gc8226ab3ea" />
 </Document>
